@@ -1,0 +1,92 @@
+[
+  {
+    "id": "fonte-nao-identificada",
+    "tipo": "alerta",
+    "nome": "Fonte não identificada",
+    "descricao": "Mensagem sem autor claro, sem link e sem documento. Se ninguém assina a informação, ninguém se responsabiliza por ela."
+  },
+  {
+    "id": "prova-ausente",
+    "tipo": "alerta",
+    "nome": "Prova que ninguém mostra",
+    "descricao": "Fala de decreto, documento vazado ou lei, mas não mostra nenhum. Fatos oficiais deixam rastro: Diário Oficial, site do órgão, número da lei."
+  },
+  {
+    "id": "urgencia-artificial",
+    "tipo": "alerta",
+    "nome": "Urgência artificial",
+    "descricao": "\"Só hoje\", \"compartilhe antes que apaguem\", \"até 23h59\". A pressa existe para impedir que você pare e verifique."
+  },
+  {
+    "id": "apelo-emocional",
+    "tipo": "alerta",
+    "nome": "Apelo ao medo ou à emoção",
+    "descricao": "\"Compartilhe com quem você ama\", \"avise todo mundo\". Conteúdo que mexe com medo ou carinho se espalha antes de ser checado."
+  },
+  {
+    "id": "cura-milagrosa",
+    "tipo": "alerta",
+    "nome": "Cura milagrosa",
+    "descricao": "Promessa de curar doença séria com receita caseira e a ideia de que \"os médicos escondem\". Saúde se confirma com órgãos oficiais."
+  },
+  {
+    "id": "golpe-financeiro",
+    "tipo": "alerta",
+    "nome": "Golpe financeiro",
+    "descricao": "Pedido para clicar em link, atualizar dados ou pagar algo; oferta boa demais para ser verdade. Bancos e lojas sérias não agem assim."
+  },
+  {
+    "id": "boato-reciclado",
+    "tipo": "alerta",
+    "nome": "Boato reciclado",
+    "descricao": "Alerta que circula há anos com pequenas mudanças. Uma busca rápida costuma mostrar que ele já foi desmentido."
+  },
+  {
+    "id": "exagero",
+    "tipo": "alerta",
+    "nome": "Exagero de um fato real",
+    "descricao": "Parte da notícia é verdade, mas foi ampliada (\"TODOS\", \"sempre\", \"a partir de agora\"). Meia verdade também é desinformação."
+  },
+  {
+    "id": "dado-desatualizado",
+    "tipo": "alerta",
+    "nome": "Dado desatualizado",
+    "descricao": "Pesquisa ou ranking antigo apresentado como se fosse de hoje. Confira sempre a data e a origem do dado."
+  },
+  {
+    "id": "manchete-distorcida",
+    "tipo": "alerta",
+    "nome": "Manchete que distorce estudo",
+    "descricao": "O estudo existe, mas a manchete afirma mais do que ele concluiu, como tratar um teste em animais como prova em humanos."
+  },
+  {
+    "id": "site-clonado",
+    "tipo": "alerta",
+    "nome": "Site clonado",
+    "descricao": "Página que imita um veículo confiável, com endereço parecido mas diferente. Confira a URL antes de acreditar na marca."
+  },
+  {
+    "id": "foto-fora-de-contexto",
+    "tipo": "alerta",
+    "nome": "Foto fora de contexto",
+    "descricao": "Imagem real, mas de outro lugar ou de outra época. A busca reversa de imagens mostra de onde a foto veio."
+  },
+  {
+    "id": "confirmacao-oficial",
+    "tipo": "boa-pratica",
+    "nome": "Confirmação em fonte oficial",
+    "descricao": "A informação aparece no site do órgão responsável ou em veículos independentes. É o sinal mais forte de que é verdade."
+  },
+  {
+    "id": "detalhes-verificaveis",
+    "tipo": "boa-pratica",
+    "nome": "Detalhes verificáveis",
+    "descricao": "Datas, horários, locais e nomes que podem ser conferidos. Notícias verdadeiras costumam ser específicas."
+  },
+  {
+    "id": "conteudo-acima-da-fonte",
+    "tipo": "boa-pratica",
+    "nome": "O conteúdo vale mais que a fonte",
+    "descricao": "Fonte ruim pode acertar e fonte desconhecida pode dizer a verdade. Quem decide é a investigação, não só quem enviou."
+  }
+]

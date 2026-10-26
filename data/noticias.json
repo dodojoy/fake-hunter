@@ -1,0 +1,317 @@
+[
+  {
+    "id": "CelularCancer",
+    "titulo": "Estudo comprova: usar celular causa câncer no cérebro",
+    "corpo": "Cientistas confirmaram que a radiação do celular causa tumores. Pesquisa feita com ratos mostrou aumento de casos de câncer após exposição prolongada.",
+    "imagem": "/img/noticias/canal_rede_social.png",
+    "nomeCanal": "Facebook (página Saúde Sem Segredos)",
+    "data": "09/09/2026",
+    "autor": "DrSaudeNatural",
+    "textoVerificarFonte": "A página pertence ao mesmo dono do perfil Dr. Saúde Natural, que vende adesivos anti-radiação para celular.",
+    "textoPesquisar": "O estudo existe, mas foi feito em ratos expostos a níveis de radiação muito maiores que os de um celular. Os próprios autores dizem que não dá para concluir o mesmo em humanos. A OMS classifica a evidência como limitada.",
+    "veredito": "ParcialmenteVerdadeira",
+    "dificuldade": "Media",
+    "explicacao": "A pesquisa é real, mas a manchete distorce a conclusão. Um estudo em animais não comprova nada em humanos, e a palavra comprova foi inventada pela página. Repare também que quem espalhou a notícia lucra com o medo, vendendo produtos.",
+    "sinais": [
+      "manchete-distorcida"
+    ]
+  },
+  {
+    "id": "ChaBoldo",
+    "titulo": "Chá de boldo cura diabetes em 7 dias, garante especialista",
+    "corpo": "Compartilhe com quem você ama! Os médicos escondem, mas tomar chá de boldo em jejum por uma semana elimina a diabetes sem precisar de remédio.",
+    "imagem": "/img/noticias/canal_whatsapp.png",
+    "nomeCanal": "WhatsApp (mensagem encaminhada)",
+    "data": "10/09/2026",
+    "autor": "DrSaudeNatural",
+    "textoVerificarFonte": "O tal especialista não tem nome completo nem registro no CRM. A mensagem aparece marcada como Encaminhada muitas vezes.",
+    "textoPesquisar": "Não existe nenhum estudo científico que comprove a cura da diabetes com chá. Sociedades médicas alertam que abandonar o tratamento pode ser fatal.",
+    "veredito": "Falsa",
+    "dificuldade": "Facil",
+    "explicacao": "Promessa de cura milagrosa, apelo emocional (compartilhe com quem você ama) e a ideia de que os médicos escondem a verdade são sinais clássicos de fake news na área da saúde. Espalhar esse tipo de conteúdo pode colocar vidas em risco.",
+    "sinais": [
+      "cura-milagrosa",
+      "apelo-emocional"
+    ]
+  },
+  {
+    "id": "ChuvaForte",
+    "titulo": "Alerta de chuva forte para o fim de semana em Vale Verde",
+    "corpo": "O INMET emitiu alerta laranja para chuvas intensas entre sábado e domingo, com risco de alagamentos. A Defesa Civil recomenda evitar áreas próximas ao rio.",
+    "imagem": "/img/noticias/canal_portal_oficial.png",
+    "nomeCanal": "Site oficial do INMET",
+    "data": "11/09/2026",
+    "autor": "INMET",
+    "textoVerificarFonte": "O alerta está publicado no site oficial do INMET, com número de registro, área de abrangência e prazo de validade.",
+    "textoPesquisar": "A Defesa Civil do município repetiu o alerta nas redes sociais e o Jornal da Cidade fez matéria sobre o assunto.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Facil",
+    "explicacao": "Alertas meteorológicos oficiais são informação de utilidade pública. A fonte é o órgão responsável e o conteúdo foi confirmado por outros canais. Compartilhar pode ajudar pessoas a se protegerem.",
+    "sinais": [
+      "confirmacao-oficial"
+    ]
+  },
+  {
+    "id": "CidadeViolenta",
+    "titulo": "Vale Verde é a cidade mais violenta do estado, aponta pesquisa",
+    "corpo": "Pesquisa revela que Vale Verde lidera o ranking de violência do estado. Moradores relatam medo de sair de casa à noite.",
+    "imagem": "/img/noticias/canal_rede_social.png",
+    "nomeCanal": "Instagram @fofocasdacidade",
+    "data": "11/09/2026",
+    "autor": "FofocasDaCidade",
+    "textoVerificarFonte": "A página não diz qual é a pesquisa, quem a fez ou de que ano são os dados.",
+    "textoPesquisar": "Existe uma pesquisa com esse resultado, mas ela é de 2015. Os dados mais recentes do governo do estado mostram que a cidade caiu para a 12ª posição no ranking.",
+    "veredito": "ParcialmenteVerdadeira",
+    "dificuldade": "Media",
+    "explicacao": "O dado existiu, mas está desatualizado há mais de dez anos. Usar informação antiga como se fosse atual é uma forma comum de manipulação. Sempre confira a data e a origem de pesquisas e rankings.",
+    "sinais": [
+      "dado-desatualizado"
+    ]
+  },
+  {
+    "id": "DescontoCelular",
+    "titulo": "Loja liquida celulares com 90% de desconto só hoje, clique e garanta o seu",
+    "corpo": "A maior loja de eletrônicos do país está queimando estoque: smartphone de última geração por R$ 199! Só até meia-noite, corre no link!",
+    "imagem": "/img/noticias/canal_rede_social.png",
+    "nomeCanal": "Instagram @fofocasdacidade (publicidade)",
+    "data": "13/09/2026",
+    "autor": "FofocasDaCidade",
+    "textoVerificarFonte": "A página foi paga para divulgar. O link leva a um site com endereço estranho, cheio de erros de português, que pede o número do cartão logo na primeira tela.",
+    "textoPesquisar": "A loja verdadeira publicou um alerta dizendo que não tem promoção desse tipo e que o site é falso. Consumidores relatam ter perdido dinheiro.",
+    "veredito": "Falsa",
+    "dificuldade": "Dificil",
+    "explicacao": "Oferta boa demais para ser verdade, urgência (só até meia-noite) e site que pede o cartão de imediato: golpe clássico. Páginas de fofoca costumam aceitar anúncios sem checar. Compartilhar poderia fazer sua comunidade cair no golpe.",
+    "sinais": [
+      "golpe-financeiro",
+      "urgencia-artificial"
+    ]
+  },
+  {
+    "id": "Feriado",
+    "titulo": "Feriadão amanhã?",
+    "corpo": "Corre um aviso dizendo que a prefeitura decretou feriado para amanhã, valendo para toda a cidade. Ninguém precisa ir trabalhar!",
+    "imagem": "/img/noticias/canal_whatsapp.png",
+    "nomeCanal": "WhatsApp (mensagem encaminhada)",
+    "data": "08/09/2026",
+    "autor": "CarlosNoticias",
+    "textoVerificarFonte": "Fonte não identificada. Nenhum órgão oficial confirmou a informação e a mensagem não tem link nem assinatura.",
+    "textoPesquisar": "Uma busca rápida mostra que o site oficial da prefeitura não tem nenhum comunicado sobre feriado, e o Diário Oficial não publicou decreto.",
+    "veredito": "Falsa",
+    "dificuldade": "Facil",
+    "explicacao": "A prefeitura não publicou nenhum decreto. Feriados são oficializados por lei ou decreto e aparecem no Diário Oficial e no site oficial. Mensagens sem link e sem autor identificado são um sinal clássico de boato.",
+    "sinais": [
+      "fonte-nao-identificada",
+      "prova-ausente"
+    ]
+  },
+  {
+    "id": "KitsEscolares",
+    "titulo": "Prefeitura vai distribuir kits escolares para alunos da rede municipal",
+    "corpo": "A Secretaria de Educação anunciou que os 12 mil alunos da rede municipal receberão kit com mochila, cadernos e material de escrita a partir da próxima semana, nas próprias escolas.",
+    "imagem": "/img/noticias/canal_portal_oficial.png",
+    "nomeCanal": "Portal Oficial da Prefeitura (valeverde.gov.br)",
+    "data": "10/09/2026",
+    "autor": "PrefeituraValeVerde",
+    "textoVerificarFonte": "Publicação no site oficial, assinada pela Secretaria de Educação, com o número do processo de compra.",
+    "textoPesquisar": "O Jornal da Cidade entrevistou a secretária de Educação, que confirmou o cronograma de entrega por escola.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Media",
+    "explicacao": "Informação oficial, com detalhes verificáveis e confirmada por um veículo independente. O fato de a notícia ser boa não a torna suspeita, desde que passe nas verificações.",
+    "sinais": [
+      "detalhes-verificaveis",
+      "confirmacao-oficial"
+    ]
+  },
+  {
+    "id": "NovaEspecieSapo",
+    "titulo": "Pesquisadores da UFVV descobrem nova espécie de sapo na serra da região",
+    "corpo": "Olha que legal, gente! Descobriram um sapinho novo aqui perto. Os cientistas da universidade deram o nome de Vale Verde pra ele!",
+    "imagem": "/img/noticias/canal_whatsapp.png",
+    "nomeCanal": "WhatsApp (grupo da família)",
+    "data": "12/09/2026",
+    "autor": "TiaMarcia",
+    "textoVerificarFonte": "A Tia Márcia viu a notícia em uma reportagem da TV, mas repassou de memória, sem link.",
+    "textoPesquisar": "A UFVV publicou o estudo em uma revista científica e divulgou a descoberta em seu site oficial. A espécie recebeu o nome científico Boana valeverdensis.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Dificil",
+    "explicacao": "A fonte é desconhecida e a mensagem é informal, mas o conteúdo é verdadeiro e foi confirmado na fonte original. Fontes desconhecidas não são automaticamente falsas: é a investigação que decide.",
+    "sinais": [
+      "conteudo-acima-da-fonte"
+    ]
+  },
+  {
+    "id": "PrefeitoInvestigado",
+    "titulo": "Jornal da Cidade: prefeito é investigado por desvio de R$ 30 milhões",
+    "corpo": "Reportagem exclusiva revela que o prefeito de Vale Verde é alvo de investigação da Polícia Federal por desvio de verbas da saúde. Leia a matéria completa no link.",
+    "imagem": "/img/noticias/canal_jornal.png",
+    "nomeCanal": "Site: jornaldacidade-noticias.net",
+    "data": "12/09/2026",
+    "autor": "JornalDaCidade",
+    "textoVerificarFonte": "O site oficial do Jornal da Cidade é jornaldacidade.com.br. O endereço desta notícia é diferente, imita o visual do jornal e foi registrado há apenas duas semanas.",
+    "textoPesquisar": "O Jornal da Cidade publicou uma nota alertando que um site falso está usando seu nome. A Polícia Federal informou que não há investigação em andamento contra o prefeito.",
+    "veredito": "Falsa",
+    "dificuldade": "Dificil",
+    "explicacao": "Sites clonados imitam veículos confiáveis para dar credibilidade a mentiras. A fonte parece confiável, mas o endereço é diferente do oficial. Sempre confira a URL com atenção, principalmente em notícias de forte impacto político.",
+    "sinais": [
+      "site-clonado"
+    ]
+  },
+  {
+    "id": "QuadraEscola",
+    "titulo": "Escola municipal do bairro Jardim ganha nova quadra coberta",
+    "corpo": "A Escola Municipal Maria da Penha inaugurou nesta semana uma quadra poliesportiva coberta, construída com recursos do orçamento municipal. A obra durou oito meses.",
+    "imagem": "/img/noticias/canal_jornal.png",
+    "nomeCanal": "Jornal da Cidade (site)",
+    "data": "12/09/2026",
+    "autor": "JornalDaCidade",
+    "textoVerificarFonte": "A matéria tem nome do repórter, fotos da inauguração e declarações da diretora da escola.",
+    "textoPesquisar": "A prefeitura publicou fotos da inauguração no portal oficial e a diretora confirmou a obra em entrevista à rádio local.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Facil",
+    "explicacao": "Fonte confiável, autor identificado, fotos e declarações de pessoas envolvidas. Notícias locais positivas também precisam ser conferidas, e esta passou em todas as verificações.",
+    "sinais": [
+      "detalhes-verificaveis"
+    ]
+  },
+  {
+    "id": "RemedioFalsificado",
+    "titulo": "Ministério da Saúde alerta para lote falsificado de remédio para pressão",
+    "corpo": "O Ministério da Saúde e a Anvisa alertam que o lote 4521B do medicamento para hipertensão Pressalix é falsificado e deve ser devolvido à farmácia onde foi comprado.",
+    "imagem": "/img/noticias/canal_rede_social.png",
+    "nomeCanal": "Facebook (compartilhado por Carlos Notícias)",
+    "data": "13/09/2026",
+    "autor": "CarlosNoticias",
+    "textoVerificarFonte": "Carlos Notícias já espalhou boatos antes, mas dessa vez o post traz o link para o alerta publicado no site oficial da Anvisa.",
+    "textoPesquisar": "O alerta consta no site da Anvisa e do Ministério da Saúde, com o mesmo número de lote. Jornais nacionais também publicaram a informação.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Dificil",
+    "explicacao": "Pegadinha! Uma fonte não confiável pode, às vezes, compartilhar algo verdadeiro. O que importa é o conteúdo, e ele foi confirmado nas fontes oficiais. Avalie sempre a informação, não apenas quem a enviou. Bloquear este alerta poderia prejudicar quem usa o remédio.",
+    "sinais": [
+      "conteudo-acima-da-fonte",
+      "confirmacao-oficial"
+    ]
+  },
+  {
+    "id": "RioSeco",
+    "titulo": "Foto mostra o Rio Verde completamente seco pela primeira vez na história",
+    "corpo": "Imagem impressionante mostra o leito do Rio Verde totalmente seco. Estamos vivendo a pior seca de todos os tempos!",
+    "imagem": "/img/noticias/canal_rede_social.png",
+    "nomeCanal": "Twitter/X (post viralizado)",
+    "data": "11/09/2026",
+    "autor": "ZeDoBairro",
+    "textoVerificarFonte": "O Zé encontrou a foto em outro grupo. A imagem não tem data nem crédito de fotógrafo.",
+    "textoPesquisar": "A busca reversa mostra que a foto é de 2014 e de outra cidade. O Rio Verde está com nível baixo por causa da estiagem, segundo a Defesa Civil, mas não está seco.",
+    "veredito": "ParcialmenteVerdadeira",
+    "dificuldade": "Dificil",
+    "explicacao": "A seca é real, mas a foto é antiga e de outro lugar. Fotos fora de contexto são uma das formas mais comuns de desinformação. A busca reversa de imagens é uma ferramenta essencial para descobrir de onde uma foto veio.",
+    "sinais": [
+      "foto-fora-de-contexto"
+    ]
+  },
+  {
+    "id": "TarifaZero",
+    "titulo": "Ônibus vai ser de graça todo domingo em Vale Verde",
+    "corpo": "Passando pra avisar: a prefeitura liberou tarifa zero em TODOS os ônibus aos domingos a partir de agora! Aproveitem e repassem!",
+    "imagem": "/img/noticias/canal_whatsapp.png",
+    "nomeCanal": "WhatsApp (grupo da família)",
+    "data": "13/09/2026",
+    "autor": "TiaMarcia",
+    "textoVerificarFonte": "A Tia Márcia não sabe de onde veio a mensagem. Não há link nem documento oficial anexado.",
+    "textoPesquisar": "O portal da prefeitura confirma a tarifa zero, mas só no próximo domingo, por causa do aniversário da cidade, e apenas nas linhas que vão ao centro.",
+    "veredito": "ParcialmenteVerdadeira",
+    "dificuldade": "Media",
+    "explicacao": "A informação tem um fundo de verdade (haverá tarifa zero), mas foi exagerada: não vale para todos os domingos nem para todas as linhas. Compartilhar do jeito que está faria pessoas ficarem sem dinheiro para a passagem. Notícia parcialmente verdadeira também é desinformação.",
+    "sinais": [
+      "exagero"
+    ]
+  },
+  {
+    "id": "TaxaBanco",
+    "titulo": "URGENTE: banco vai bloquear sua conta se você não atualizar o aplicativo hoje",
+    "corpo": "Atenção clientes! Quem não clicar no link e atualizar os dados até as 23h59 de hoje terá a conta bloqueada e pagará taxa de reativação de R$ 150.",
+    "imagem": "/img/noticias/canal_whatsapp.png",
+    "nomeCanal": "WhatsApp (mensagem encaminhada)",
+    "data": "09/09/2026",
+    "autor": "ZeDoBairro",
+    "textoVerificarFonte": "O link da mensagem leva para um site que não é o do banco. O Zé diz que só repassou o que recebeu de outro grupo.",
+    "textoPesquisar": "O banco publicou aviso oficial dizendo que nunca pede atualização de dados por link em mensagens. Esse é um golpe conhecido, chamado phishing.",
+    "veredito": "Falsa",
+    "dificuldade": "Facil",
+    "explicacao": "Urgência exagerada, ameaça de bloqueio e pedido para clicar em um link são a fórmula clássica de golpes. Bancos não pedem dados por mensagem. Não propagar protege sua comunidade de perder dinheiro.",
+    "sinais": [
+      "urgencia-artificial",
+      "golpe-financeiro"
+    ]
+  },
+  {
+    "id": "TaxaPix",
+    "titulo": "Governo vai cobrar taxa de 20% em todas as transferências por Pix a partir de outubro",
+    "corpo": "Documento vazado mostra que o governo vai taxar o Pix. Cada transferência acima de R$ 100 pagará 20% de imposto. Compartilhe antes que apaguem!",
+    "imagem": "/img/noticias/canal_blog.png",
+    "nomeCanal": "Blog Verdade Oculta",
+    "data": "10/09/2026",
+    "autor": "VerdadeOculta",
+    "textoVerificarFonte": "O blog não mostra o tal documento vazado. O texto não cita nenhuma lei, projeto ou órgão responsável.",
+    "textoPesquisar": "O Banco Central, responsável pelo Pix, publicou nota oficial negando qualquer cobrança. Não existe projeto de lei com esse conteúdo.",
+    "veredito": "Falsa",
+    "dificuldade": "Dificil",
+    "explicacao": "A frase compartilhe antes que apaguem é um truque para gerar urgência e impedir que você verifique. Documento vazado que ninguém mostra e ausência de leis citadas são fortes sinais de boato. O órgão responsável negou oficialmente.",
+    "sinais": [
+      "urgencia-artificial",
+      "prova-ausente"
+    ]
+  },
+  {
+    "id": "VacinaGripe",
+    "titulo": "Campanha de vacinação contra a gripe começa na segunda-feira",
+    "corpo": "A Prefeitura de Vale Verde informa que todas as unidades básicas de saúde vão aplicar a vacina contra a gripe a partir de segunda, das 8h às 17h, para toda a população.",
+    "imagem": "/img/noticias/canal_portal_oficial.png",
+    "nomeCanal": "Portal Oficial da Prefeitura (valeverde.gov.br)",
+    "data": "14/09/2026",
+    "autor": "PrefeituraValeVerde",
+    "textoVerificarFonte": "O endereço termina em .gov.br e a publicação está assinada pela Secretaria Municipal de Saúde.",
+    "textoPesquisar": "O Ministério da Saúde e o Jornal da Cidade também divulgaram a campanha, com as mesmas datas e horários.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Facil",
+    "explicacao": "Fonte oficial, informação confirmada por outros veículos e dados concretos (datas, horários e locais). Todos os sinais de uma notícia verdadeira. Compartilhar ajuda a comunidade.",
+    "sinais": [
+      "confirmacao-oficial",
+      "detalhes-verificaveis"
+    ]
+  },
+  {
+    "id": "VagasProgramacao",
+    "titulo": "UFVV abre 500 vagas gratuitas em curso de programação para iniciantes",
+    "corpo": "A Universidade Federal de Vale Verde abriu inscrições para um curso gratuito de introdução à programação. As vagas são para maiores de 16 anos e as inscrições vão até o dia 30.",
+    "imagem": "/img/noticias/canal_portal_oficial.png",
+    "nomeCanal": "Instagram oficial da UFVV",
+    "data": "12/09/2026",
+    "autor": "UniversidadeFederal",
+    "textoVerificarFonte": "O perfil tem selo de verificação e o post traz link para o edital no site oficial da universidade.",
+    "textoPesquisar": "O edital está no site da UFVV, com número de vagas, requisitos e datas. O Jornal da Cidade também noticiou a abertura das inscrições.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Media",
+    "explicacao": "Perfil verificado, link para documento oficial e informação confirmada em mais de uma fonte. Uma oportunidade real que vale a pena compartilhar.",
+    "sinais": [
+      "confirmacao-oficial"
+    ]
+  },
+  {
+    "id": "VirusBomDia",
+    "titulo": "Novo vírus rouba dados do celular por mensagens de Bom Dia",
+    "corpo": "Hackers estão usando as imagens de bom dia para instalar um vírus que rouba senhas bancárias. Apague todas as imagens de bom dia que você recebeu e avise todo mundo!",
+    "imagem": "/img/noticias/canal_blog.png",
+    "nomeCanal": "Blog Verdade Oculta",
+    "data": "08/09/2026",
+    "autor": "VerdadeOculta",
+    "textoVerificarFonte": "O blog não tem autor identificado e a página está cheia de anúncios. Não cita nenhuma empresa de segurança digital.",
+    "textoPesquisar": "Especialistas em segurança explicam que uma imagem comum não instala programas sozinha. Agências de checagem já classificaram esse boato como falso em vários países.",
+    "veredito": "Falsa",
+    "dificuldade": "Media",
+    "explicacao": "Esse boato circula há anos em versões diferentes. Ele usa o medo e o pedido de avisar todo mundo para se espalhar. Desconfie de alertas de segurança que não vêm de empresas ou órgãos especializados.",
+    "sinais": [
+      "boato-reciclado",
+      "apelo-emocional"
+    ]
+  }
+]

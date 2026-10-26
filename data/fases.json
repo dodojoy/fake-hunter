@@ -1,0 +1,50 @@
+[
+  {
+    "id": "Fase1",
+    "nomeFase": "Fase 1 – Primeiros passos",
+    "descricao": "Notícias fáceis: aprenda a usar as ferramentas de investigação.",
+    "noticias": [
+      "Feriado",
+      "VacinaGripe",
+      "ChaBoldo",
+      "ChuvaForte",
+      "TaxaBanco",
+      "QuadraEscola"
+    ],
+    "embaralhar": false,
+    "proximaFase": "Fase2",
+    "abertura": "Primeiro dia no Vale Verde Checa! Vamos começar com casos simples. Leia com calma e use as ferramentas de investigação antes de decidir."
+  },
+  {
+    "id": "Fase2",
+    "nomeFase": "Fase 2 – Meia verdade",
+    "descricao": "Nem tudo é totalmente falso ou totalmente verdadeiro. Preste atenção nos detalhes.",
+    "noticias": [
+      "TarifaZero",
+      "VagasProgramacao",
+      "VirusBomDia",
+      "CidadeViolenta",
+      "KitsEscolares",
+      "CelularCancer"
+    ],
+    "embaralhar": false,
+    "proximaFase": "Fase3",
+    "abertura": "Bom trabalho até aqui. Agora os boatos ficam mais espertos: muitos misturam um pedaço de verdade com exagero, dado velho ou manchete enganosa."
+  },
+  {
+    "id": "Fase3",
+    "nomeFase": "Fase 3 – Caçador experiente",
+    "descricao": "Sites clonados, fotos antigas e fontes enganosas. Confie na investigação, não na aparência.",
+    "noticias": [
+      "RemedioFalsificado",
+      "PrefeitoInvestigado",
+      "RioSeco",
+      "TaxaPix",
+      "NovaEspecieSapo",
+      "DescontoCelular"
+    ],
+    "embaralhar": false,
+    "proximaFase": null,
+    "abertura": "Os golpistas perceberam que você está de olho. Prepare-se para sites clonados, fotos antigas e fontes enganosas — e lembre que até fonte ruim às vezes acerta."
+  }
+]

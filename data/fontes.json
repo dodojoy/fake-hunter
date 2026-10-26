@@ -1,0 +1,79 @@
+[
+  {
+    "id": "CarlosNoticias",
+    "nomeExibido": "Carlos Notícias",
+    "avatar": null,
+    "status": "NaoConfiavel",
+    "historico": "Perfil sem identificação clara. Já publicou 3 informações desmentidas nos últimos meses."
+  },
+  {
+    "id": "DrSaudeNatural",
+    "nomeExibido": "Dr. Saúde Natural",
+    "avatar": null,
+    "status": "NaoConfiavel",
+    "historico": "Perfil que vende chás e suplementos. Não tem registro em nenhum conselho de medicina e já teve posts removidos por informação falsa."
+  },
+  {
+    "id": "FofocasDaCidade",
+    "nomeExibido": "@fofocasdacidade",
+    "avatar": null,
+    "status": "NaoConfiavel",
+    "historico": "Página anônima de fofocas locais. Vive de cliques e polêmicas; raramente cita de onde tirou a informação."
+  },
+  {
+    "id": "INMET",
+    "nomeExibido": "Instituto Nacional de Meteorologia (INMET)",
+    "avatar": null,
+    "status": "Confiavel",
+    "historico": "Órgão oficial responsável pelas previsões e alertas meteorológicos no país."
+  },
+  {
+    "id": "JornalDaCidade",
+    "nomeExibido": "Jornal da Cidade",
+    "avatar": null,
+    "status": "Confiavel",
+    "historico": "Jornal tradicional da região, com 40 anos de história, redação identificada e política de correção de erros."
+  },
+  {
+    "id": "MinisterioSaude",
+    "nomeExibido": "Ministério da Saúde",
+    "avatar": null,
+    "status": "Confiavel",
+    "historico": "Órgão oficial do governo federal. Publica alertas sanitários e campanhas de vacinação."
+  },
+  {
+    "id": "PrefeituraValeVerde",
+    "nomeExibido": "Prefeitura de Vale Verde – Portal Oficial",
+    "avatar": null,
+    "status": "Confiavel",
+    "historico": "Canal oficial da prefeitura, com endereço .gov.br. Publica decretos, avisos e campanhas públicas."
+  },
+  {
+    "id": "TiaMarcia",
+    "nomeExibido": "Tia Márcia",
+    "avatar": null,
+    "status": "Desconhecida",
+    "historico": "Membro do grupo da família. Compartilha muitas mensagens recebidas de outros grupos, sem verificar."
+  },
+  {
+    "id": "UniversidadeFederal",
+    "nomeExibido": "Universidade Federal de Vale Verde (UFVV)",
+    "avatar": null,
+    "status": "Confiavel",
+    "historico": "Instituição pública de ensino e pesquisa. Publica editais e resultados de estudos em canais oficiais."
+  },
+  {
+    "id": "VerdadeOculta",
+    "nomeExibido": "Blog Verdade Oculta",
+    "avatar": null,
+    "status": "NaoConfiavel",
+    "historico": "Site sem autor identificado, cheio de anúncios. Publica teorias sem fontes e já foi desmentido por agências de checagem várias vezes."
+  },
+  {
+    "id": "ZeDoBairro",
+    "nomeExibido": "Zé do Bairro",
+    "avatar": null,
+    "status": "Desconhecida",
+    "historico": "Morador conhecido do bairro. Bem-intencionado, mas repassa tudo o que recebe sem conferir."
+  }
+]
