@@ -116,6 +116,7 @@ export default function Partida({
   const [sinaisNovos, setSinaisNovos] = useState<string[]>([]);
   const [pausa, setPausa] = useState(false);
   const [passo, setPasso] = useState<number | null>(null);
+  const [dicaAberta, setDicaAberta] = useState(false);
   const [recorde] = useState(() => lerRecordes()[faseId] ?? 0);
   const inicioNoticia = useRef(0);
   const prefs = usePreferencias();
@@ -155,6 +156,7 @@ export default function Partida({
     if (prox === s) return;
     if (passo !== null) encerrarTutorial();
     setS(prox);
+    setDicaAberta(false);
 
     registrarDecisao({
       quando: new Date().toISOString(),
@@ -183,6 +185,7 @@ export default function Partida({
   function onProximaNoticia() {
     const prox = proximaNoticia(s);
     setS(prox);
+    setDicaAberta(false);
     inicioNoticia.current = performance.now();
     if (prox.etapa === "fimDeFase") {
       tocar("fimDeFase");
@@ -195,6 +198,8 @@ export default function Partida({
         erros: prox.erros,
         melhorSequencia: prox.melhorSequencia,
       });
+      // Última fase: vai direto para a tela de conclusão com o resultado da jornada inteira.
+      if (!s.fase.proximaFase) onConcluirJornada();
     } else {
       window.scrollTo({ top: 0 });
     }
@@ -214,6 +219,7 @@ export default function Partida({
         c: () => onDecidir(true),
         n: () => onDecidir(false),
         l: () => falar(textoNoticia(noticia), "noticia"),
+        ...(s.fase.dica && { d: () => setDicaAberta((a) => !a) }),
         escape: () => setPausa(true),
       };
       if (!acao[tecla]) return;
@@ -256,6 +262,8 @@ export default function Partida({
           <PainelInvestigacao
             s={s}
             onInvestigar={onInvestigar}
+            dicaAberta={dicaAberta}
+            onDica={() => setDicaAberta((a) => !a)}
             destaque={alvoTutorial === "investigacao"}
           >
             {alvoTutorial === "investigacao" && dica}
@@ -289,7 +297,7 @@ export default function Partida({
               {s.noticias.length} notícias · até 2 investigações por notícia
               {recorde > 0 && <> · Seu recorde: {recorde} pontos</>}
             </p>
-            <Botao cor="amarelo" className="text-xl" onClick={onComecar} autoFocus>
+            <Botao cor="verde" icone="jogar" className="text-2xl" onClick={onComecar} autoFocus>
               Começar
             </Botao>
           </Painel>
@@ -322,24 +330,28 @@ export default function Partida({
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Botao cor="azul" className="text-lg" onClick={() => onJogarFase(s.fase.id)}>
+              <Botao
+                cor="azul"
+                icone="repetir"
+                className="text-xl"
+                onClick={() => onJogarFase(s.fase.id)}
+              >
                 Jogar de novo
               </Botao>
-              {s.fase.proximaFase ? (
+              {/* A última fase não passa por aqui: vai direto para a tela de conclusão. */}
+              {s.fase.proximaFase && (
                 <Botao
-                  cor="amarelo"
-                  className="text-lg"
+                  cor="verde"
+                  icone="proxima"
+                  iconeADireita
+                  className="text-xl"
                   onClick={() => onJogarFase(s.fase.proximaFase!)}
                   autoFocus
                 >
-                  Próxima fase →
-                </Botao>
-              ) : (
-                <Botao cor="amarelo" className="text-lg" onClick={onConcluirJornada} autoFocus>
-                  Concluir jornada →
+                  Próxima fase
                 </Botao>
               )}
-              <Botao cor="claro" className="text-lg" onClick={onMenu}>
+              <Botao cor="amarelo" icone="menu" className="text-xl" onClick={onMenu}>
                 Menu
               </Botao>
             </div>
@@ -367,14 +379,15 @@ export default function Partida({
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Botao
-                cor="amarelo"
-                className="text-lg"
+                cor="azul"
+                icone="repetir"
+                className="text-xl"
                 onClick={() => onJogarFase(s.fase.id)}
                 autoFocus
               >
                 Tentar de novo
               </Botao>
-              <Botao cor="claro" className="text-lg" onClick={onMenu}>
+              <Botao cor="amarelo" icone="menu" className="text-xl" onClick={onMenu}>
                 Menu
               </Botao>
             </div>
@@ -385,11 +398,17 @@ export default function Partida({
       {pausa && (
         <Modal rotulo="Pausa" onFechar={() => setPausa(false)}>
           <Painel titulo="Pausa">
-            <Botao cor="amarelo" className="text-xl" onClick={() => setPausa(false)} autoFocus>
+            <Botao
+              cor="verde"
+              icone="jogar"
+              className="text-2xl"
+              onClick={() => setPausa(false)}
+              autoFocus
+            >
               Continuar
             </Botao>
             <OpcoesAcessibilidade />
-            <Botao cor="claro" onClick={onMenu}>
+            <Botao cor="amarelo" icone="menu" className="text-xl" onClick={onMenu}>
               Voltar ao menu (perde o progresso da fase)
             </Botao>
           </Painel>
@@ -425,7 +444,7 @@ function Hud({
     >
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-3 py-2 sm:px-6">
         <div className="flex min-w-0 flex-1 basis-44 items-center gap-2 sm:gap-3">
-          <Icone src="/img/ui/ico_confianca.png" tamanho={36} className="max-sm:hidden" />
+          <Icone src="/img/ui/hud/selo_confianca.png" tamanho={36} className="max-sm:hidden" />
           <div
             role="progressbar"
             aria-label="Confiança da comunidade"
@@ -449,43 +468,46 @@ function Hud({
           <span className="text-sm font-semibold text-texto-sutil max-sm:sr-only">
             {s.fase.nomeFase}
           </span>
-          <ol
-            aria-label={`Notícia ${s.indice + 1} de ${s.noticias.length}`}
-            className="flex gap-1.5"
-          >
-            {s.noticias.map((n, i) => {
-              const resultado = s.historico[i];
-              const atual = i === s.indice;
-              return (
-                <li
-                  key={n.id}
-                  aria-hidden
-                  className={`flex h-5 w-5 items-center justify-center rounded-full border-2 text-[0.65rem] font-black ${
-                    resultado === true
-                      ? "border-verde bg-verde text-white"
-                      : resultado === false
-                        ? "border-vermelho bg-vermelho text-white"
-                        : atual
-                          ? "border-amarelo bg-amarelo/30"
-                          : "border-texto-sutil/50"
-                  }`}
-                >
-                  {resultado === true ? "✓" : resultado === false ? "✕" : ""}
-                </li>
-              );
-            })}
-          </ol>
+          <div className="flex items-center gap-2">
+            <Icone src="/img/ui/hud/selo_progresso.png" tamanho={26} />
+            <ol
+              aria-label={`Notícia ${s.indice + 1} de ${s.noticias.length}`}
+              className="flex gap-1.5"
+            >
+              {s.noticias.map((n, i) => {
+                const resultado = s.historico[i];
+                const atual = i === s.indice;
+                return (
+                  <li
+                    key={n.id}
+                    aria-hidden
+                    className={`flex h-5 w-5 items-center justify-center rounded-full border-2 text-[0.65rem] font-black ${
+                      resultado === true
+                        ? "border-verde bg-verde text-white"
+                        : resultado === false
+                          ? "border-vermelho bg-vermelho text-white"
+                          : atual
+                            ? "border-amarelo bg-amarelo/30"
+                            : "border-texto-sutil/50"
+                    }`}
+                  >
+                    {resultado === true ? "✓" : resultado === false ? "✕" : ""}
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
         </div>
 
         <div className="flex items-center gap-4">
           {s.sequencia > 1 && (
             <span className="flex items-center gap-1 font-extrabold whitespace-nowrap text-amarelo">
-              <Icone src="/img/ui/ico_sequencia.png" tamanho={32} />
+              <Icone src="/img/ui/hud/selo_sequencia.png" tamanho={30} />
               {s.sequencia}x<span className="sr-only"> acertos seguidos</span>
             </span>
           )}
           <span className="flex items-center gap-1 font-extrabold whitespace-nowrap">
-            <Icone src="/img/ui/ico_pontos.png" tamanho={32} />
+            <Icone src="/img/ui/hud/selo_pontos.png" tamanho={30} />
             {s.pontos}
             <span className="sr-only"> pontos</span>
           </span>
@@ -545,7 +567,7 @@ function CartaoNoticia({
             height={450}
             sizes="(min-width: 768px) 40vw, 100vw"
             unoptimized={!noticia.imagem.startsWith("/")} // imagens externas de pacotes do professor
-            className="aspect-video w-full rounded-lg border-2 border-papel-texto/20 object-cover shadow-md"
+            className="aspect-video w-full rounded-lg border-2 border-papel-texto/20 bg-white object-contain p-2 shadow-md"
           />
         )}
         <div className="min-w-0">
@@ -599,16 +621,16 @@ const INVESTIGACOES: { tipo: Investigacao; rotulo: string; icone: string; atalho
   {
     tipo: "verificarFonte",
     rotulo: "Verificar Fonte",
-    icone: "/img/ui/ico_verificar_fonte.png",
+    icone: "verificar_fonte",
     atalho: "1",
   },
   {
     tipo: "consultarReferencia",
     rotulo: "Consultar Referência",
-    icone: "/img/ui/ico_consultar_referencia.png",
+    icone: "consultar_referencia",
     atalho: "2",
   },
-  { tipo: "pesquisar", rotulo: "Pesquisar", icone: "/img/ui/ico_pesquisar.png", atalho: "3" },
+  { tipo: "pesquisar", rotulo: "Pesquisar", icone: "pesquisar", atalho: "3" },
 ];
 
 // O status nunca depende só da cor: também tem símbolo e texto.
@@ -621,11 +643,15 @@ const STATUS: Record<StatusFonte, { simbolo: string; classe: string }> = {
 function PainelInvestigacao({
   s,
   onInvestigar,
+  dicaAberta,
+  onDica,
   destaque,
   children,
 }: {
   s: EstadoPartida;
   onInvestigar: (tipo: Investigacao) => void;
+  dicaAberta: boolean;
+  onDica: () => void;
   destaque: boolean;
   children?: React.ReactNode;
 }) {
@@ -647,6 +673,17 @@ function PainelInvestigacao({
     if (!f) {
       textoResultado = "Nenhuma informação sobre o autor.";
       corpo = <p>{textoResultado}</p>;
+    } else if (s.fase.ocultarStatusDaFonte) {
+      // Fase sem status: o jogador precisa julgar a fonte pelo que ela escreve.
+      textoResultado = `${f.nomeExibido}. ${f.historico}`;
+      corpo = (
+        <>
+          <p>
+            <b>{f.nomeExibido}</b>
+          </p>
+          <p className="mt-1">{f.historico}</p>
+        </>
+      );
     } else {
       const st = STATUS[f.status];
       textoResultado = `${f.nomeExibido}. Status: ${statusTexto(f.status)}. ${f.historico}`;
@@ -672,9 +709,30 @@ function PainelInvestigacao({
       className={`relative rounded-2xl ${destaque ? "destaque-tutorial z-40" : ""}`}
     >
       <div className="mb-2 flex flex-wrap items-center justify-between gap-2 rounded-xl bg-painel-escuro px-3 py-1.5 text-texto-claro">
-        <h2 id="titulo-investigar" className="font-titulo text-xl">
-          Investigar
-        </h2>
+        <div className="flex items-center gap-3">
+          <h2 id="titulo-investigar" className="font-titulo text-2xl">
+            Investigar
+          </h2>
+          {s.fase.dica && (
+            <button
+              type="button"
+              onClick={() => {
+                tocar("clique");
+                onDica();
+              }}
+              aria-expanded={dicaAberta}
+              aria-controls="balao-dica"
+              aria-keyshortcuts="D"
+              className="flex cursor-pointer items-center gap-1 rounded-full pr-2 font-bold hover:bg-white/10"
+            >
+              <Icone src="/img/ui/hud/selo_dica.png" tamanho={34} />
+              Dica
+              <kbd className="atalho so-teclado" aria-hidden>
+                D
+              </kbd>
+            </button>
+          )}
+        </div>
         {restantes !== null && (
           <p className="flex items-center gap-2 font-bold">
             <Icone src="/img/ui/ico_investigacoes.png" tamanho={28} />
@@ -682,17 +740,34 @@ function PainelInvestigacao({
           </p>
         )}
       </div>
+      {s.fase.dica && dicaAberta && (
+        <div
+          id="balao-dica"
+          role="note"
+          className="surgir relative mb-3 ml-auto max-w-xl rounded-2xl border-3 border-marinho bg-[#fff6e0] px-4 py-3 text-lg text-marinho shadow-lg"
+        >
+          <b>Dica: </b>
+          {s.fase.dica}
+          <BotaoOuvir id="dica" texto={s.fase.dica} className="mt-2 ml-2 align-middle" />
+        </div>
+      )}
       <div className="grid grid-cols-3 gap-2 sm:gap-4">
         {INVESTIGACOES.map(({ tipo, rotulo, icone, atalho }) => (
           <Botao
             key={tipo}
             cor="azul"
             atalho={atalho}
-            className="min-h-20 flex-col gap-1 rounded-2xl px-2 text-sm sm:flex-row sm:gap-2 sm:px-4 sm:text-lg"
+            className="min-h-20 flex-col gap-1 rounded-2xl px-2 text-lg sm:flex-row sm:gap-2 sm:px-4 sm:text-2xl"
             disabled={!liberado || s.investigacoesUsadas.includes(tipo)}
             onClick={() => onInvestigar(tipo)}
           >
-            <Icone src={icone} tamanho={36} />
+            <Image
+              src={`/img/ui/icones/ico_${icone}_branco.png`}
+              alt=""
+              width={128}
+              height={128}
+              className="h-8 w-8 shrink-0"
+            />
             <span className="text-center">{rotulo}</span>
           </Botao>
         ))}
@@ -706,7 +781,7 @@ function PainelInvestigacao({
           <>
             <div className="mb-1 flex items-center justify-between gap-3">
               <h3 className="flex items-center gap-2 font-extrabold text-amarelo">
-                <Icone src={resultado.icone} tamanho={28} />
+                <Icone src={`/img/ui/icones/ico_${resultado.icone}_branco.png`} tamanho={26} />
                 {resultado.rotulo}
               </h3>
               <BotaoOuvir id="resultado" texto={`${resultado.rotulo}. ${textoResultado}`} />
@@ -749,21 +824,21 @@ function BarraDecisao({
         <Botao
           cor="verde"
           atalho="C"
-          className="flex-1 py-3 text-lg sm:text-2xl"
+          icone="compartilhar"
+          className="flex-1 gap-2 px-3 py-3 text-xl whitespace-nowrap sm:gap-3 sm:px-6 sm:text-3xl"
           disabled={s.decisaoTomada}
           onClick={() => onDecidir(true)}
         >
-          <Icone src="/img/ui/ico_compartilhar.png" tamanho={36} className="max-sm:hidden" />
           Compartilhar
         </Botao>
         <Botao
           cor="vermelho"
           atalho="N"
-          className="flex-1 py-3 text-lg sm:text-2xl"
+          icone="nao_propagar"
+          className="flex-1 gap-2 px-3 py-3 text-xl whitespace-nowrap sm:gap-3 sm:px-6 sm:text-3xl"
           disabled={s.decisaoTomada}
           onClick={() => onDecidir(false)}
         >
-          <Icone src="/img/ui/ico_bloquear.png" tamanho={36} className="max-sm:hidden" />
           Não Propagar
         </Botao>
       </div>
@@ -824,9 +899,9 @@ function DicaTutorial({
 // ---------- Painéis modais ----------
 
 const ICONES_VEREDITO: Record<Veredito, string> = {
-  Verdadeira: "/img/ui/ico_verdadeiro.png",
-  Falsa: "/img/ui/ico_falso.png",
-  ParcialmenteVerdadeira: "/img/ui/ico_parcial.png",
+  Verdadeira: "/img/ui/hud/selo_verdadeiro.png",
+  Falsa: "/img/ui/hud/selo_falso.png",
+  ParcialmenteVerdadeira: "/img/ui/hud/selo_parcial.png",
 };
 
 function Explicacao({
@@ -865,8 +940,15 @@ function Explicacao({
             texto={textoExplicacao(noticia, s.acertouUltima)}
             className="px-4 py-2 text-base"
           />
-          <Botao cor="amarelo" className="text-xl" onClick={onProxima} autoFocus>
-            Próxima notícia →
+          <Botao
+            cor="amarelo"
+            icone="proxima"
+            iconeADireita
+            className="text-2xl"
+            onClick={onProxima}
+            autoFocus
+          >
+            Próxima notícia
           </Botao>
         </div>
       </Painel>

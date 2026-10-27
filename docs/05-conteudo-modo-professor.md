@@ -69,12 +69,17 @@ O resultado de *Consultar Referência* vem automaticamente da fonte (`status` + 
   "abertura": "Mensagem da coordenadora no início da fase.",
   "noticias": ["Feriado", "VacinaGripe", "ChaBoldo"],
   "embaralhar": false,
-  "proximaFase": "Fase2"
+  "proximaFase": "Fase2",
+  "ocultarStatusDaFonte": false,
+  "dica": ""
 }
 ```
 
-A primeira fase da lista é onde o jogo começa; `proximaFase: null` marca a última (que leva ao
-certificado). `descricao` e `abertura` são opcionais.
+A primeira fase da lista é onde o jogo começa; `proximaFase: null` marca a última (que leva à
+tela de conclusão). `descricao`, `abertura`, `ocultarStatusDaFonte` e `dica` são opcionais:
+
+- `ocultarStatusDaFonte: true` faz *Consultar Referência* omitir se a fonte é confiável.
+- `dica` com texto faz aparecer o botão de lâmpada com essa dica.
 
 ### Sinal
 
@@ -97,7 +102,7 @@ certificado). `descricao` e `abertura` são opcionais.
    quebrada, imagem inexistente ou sinal que nenhuma notícia usa.
 
 > Os testes de `tests/conteudo.test.ts` também conferem os números do conteúdo original
-> (18 notícias, 6 por fase etc.). Se a mudança for proposital, atualize esses números no teste.
+> (24 notícias, 6 por fase etc.). Se a mudança for proposital, atualize esses números no teste.
 
 ## Modo professor
 

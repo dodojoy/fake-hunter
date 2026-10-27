@@ -11,9 +11,10 @@ reaparece na abertura de cada fase, comentando a evolução dos boatos:
 | 1 – Primeiros passos | Casos simples, aprender as ferramentas | "Primeiro dia… use as ferramentas sem pressa" |
 | 2 – Meia verdade | Exagero, dado velho, manchete distorcida | "Os boatos ficam mais espertos" |
 | 3 – Caçador experiente | Site clonado, foto antiga, fonte enganosa | "Os golpistas perceberam que você está de olho" |
+| 4 – Olho clínico | Fontes falsas que imitam órgãos oficiais; ficha sem status | "Repare em como cada fonte escreve" |
 
-Ao concluir a Fase 3, o jogador recebe um **certificado de Caçador de Fake News** com nome,
-pontuação, acertos, sinais aprendidos e um nível (Aprendiz, Experiente ou Lendário).
+Ao concluir a Fase 4, o jogador vê a **tela de conclusão**: um selo de desempenho, o resultado
+de cada fase e um certificado com o nome dele, que pode ser impresso.
 
 ## Fluxo de telas
 
@@ -26,7 +27,8 @@ Menu ─► Introdução (só na 1ª vez) ─► Abertura da fase ─► Tutoria
                      │                 carimbo + explicação ───────────────┘
                      │                         │ (última notícia)
                      │                         ▼
-                     │                  Fim de fase ─► próxima fase / certificado
+                     │                  Fim de fase ─► próxima fase
+                     │                  (última fase ─► tela de conclusão com selo)
                      │
                      └─ confiança chegou a 0 ─► Game over ("Você foi demitido!")
 ```
@@ -76,17 +78,48 @@ Exemplo verificado em teste: acertar as 6 notícias da Fase 1 dá **975 pontos**
 
 - Fases encadeadas, 6 notícias cada, em ordem fixa (há a opção `embaralhar`, desligada).
 - Confiança e pontuação **reiniciam a cada fase**.
-- No fim de fase: *Jogar de novo*, *Próxima fase* (ou *Concluir jornada* na última) e *Menu*.
+- No fim de fase: *Jogar de novo*, *Próxima fase* e *Menu*. A última fase vai direto para a
+  tela de conclusão.
 - *Jogar* no menu sempre começa uma nova jornada pela primeira fase.
+
+### Regras especiais por fase
+
+- `ocultarStatusDaFonte`: *Consultar Referência* mostra o nome e o histórico da fonte, mas não
+  diz se ela é confiável. Usado na Fase 4, em que as fontes falsas imitam órgãos oficiais e se
+  entregam por erros de português ("Defeza Civil", "Portal Ofissial", "Ministerio da Previdência
+  Sosial", "Portal Ciênsia Hoje").
+- `dica`: mostra um botão de lâmpada (atalho **D**) que abre um balão com a dica da fase. O balão
+  fecha ao decidir e ao passar para a próxima notícia.
+
+![Fase 4: ficha sem status e balão de dica](img/fase4-dica.jpg)
+
+### Tela de conclusão e selos
+
+O selo considera todas as fases concluídas na jornada (se o jogador repetir uma fase, vale o
+resultado mais recente). Aproveitamento = acertos ÷ notícias decididas.
+
+| Aproveitamento | Selo |
+| --- | --- |
+| 100% (nenhum erro) | Especialista |
+| 80% ou mais | Caçador voraz |
+| 60% ou mais | Caçador vegetariano |
+| abaixo de 60% | Caçado pelas fake news |
+
+Mesmo chegando ao fim sem ser demitido, o jogador pode receber "Caçado pelas fake news". Os
+limites ficam em [`lib/classificacao.ts`](../lib/classificacao.ts) e são testados em
+[`tests/classificacao.test.ts`](../tests/classificacao.test.ts).
+
+![Tela de conclusão com selo e certificado](img/certificado.jpg)
 
 Todas essas regras estão em [`lib/regras.ts`](../lib/regras.ts) e cobertas por
 [`tests/regras.test.ts`](../tests/regras.test.ts).
 
 ## Conteúdo
 
-18 notícias (7 verdadeiras, 7 falsas, 4 parcialmente verdadeiras; 6 de cada dificuldade),
-11 fontes e 15 sinais no Caderno do Checador (12 sinais de alerta e 3 boas práticas). Os textos
-das notícias e das fontes vieram na íntegra do protótipo em Unity.
+24 notícias (9 verdadeiras, 10 falsas, 5 parcialmente verdadeiras; 6 fáceis, 6 médias e 12
+difíceis), 15 fontes e 17 sinais no Caderno do Checador (13 sinais de alerta e 4 boas
+práticas). Os textos das notícias e das fontes vieram na íntegra do protótipo em Unity (a Fase 4
+veio da branch `feature/fase4-conclusao`).
 
 ### Casos de destaque
 
@@ -97,3 +130,6 @@ das notícias e das fontes vieram na íntegra do protótipo em Unity.
 | Prefeito investigado (Fase 3) | Usa o nome do jornal confiável num **site clonado** |
 | Ônibus de graça (Fase 2) | Fato real **exagerado** ("todos os domingos"): meia verdade |
 | Celular causa câncer (Fase 2) | Estudo real em ratos, **manchete distorcida** |
+| 14º salário (Fase 4) | Golpe assinado por "Ministerio da Previdência **Sosial**" |
+| Café e coração (Fase 4) | Estudo real exagerado por um site que escreve "Ciên**s**ia" |
+| Cursinho UFVV (Fase 4) | Verdadeira: sem status da fonte, o jogador confia no texto revisado e na confirmação |

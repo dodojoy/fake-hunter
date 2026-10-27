@@ -44,7 +44,25 @@
       "DescontoCelular"
     ],
     "embaralhar": false,
-    "proximaFase": null,
+    "proximaFase": "Fase4",
     "abertura": "Os golpistas perceberam que você está de olho. Prepare-se para sites clonados, fotos antigas e fontes enganosas — e lembre que até fonte ruim às vezes acerta."
+  },
+  {
+    "id": "Fase4",
+    "nomeFase": "Fase 4 – Olho clínico",
+    "descricao": "Última fase! A ficha das fontes não mostra mais se elas são confiáveis. Desconfie de quem escreve errado.",
+    "noticias": [
+      "DecimoQuartoSalario",
+      "VacinaSarampo",
+      "BarragemRompe",
+      "CafeCoracao",
+      "CursinhoUFVV",
+      "RecadastramentoCPF"
+    ],
+    "embaralhar": false,
+    "proximaFase": null,
+    "ocultarStatusDaFonte": true,
+    "dica": "Nesta fase a ficha da fonte não mostra se ela é confiável. Veículos e órgãos sérios revisam o que publicam: erros de português no nome ou nos textos da fonte são sinal de golpe.",
+    "abertura": "Última missão! Os golpistas agora copiam até o nome dos órgãos oficiais, e a ficha das fontes não diz mais quem é confiável. Leia com atenção como cada uma escreve: quem trabalha sério revisa o que publica."
   }
 ]

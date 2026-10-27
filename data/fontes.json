@@ -7,6 +7,20 @@
     "historico": "Perfil sem identificação clara. Já publicou 3 informações desmentidas nos últimos meses."
   },
   {
+    "id": "CiensiaHoje",
+    "nomeExibido": "Portal Ciênsia Hoje",
+    "avatar": null,
+    "status": "NaoConfiavel",
+    "historico": "Site de divulgação científica com resumos de estudos do mundo inteiro, traduzido pela nossa equipe."
+  },
+  {
+    "id": "DefezaCivil",
+    "nomeExibido": "Defeza Civil de Vale Verde",
+    "avatar": null,
+    "status": "NaoConfiavel",
+    "historico": "Perfil de alerta á população. Avisamos primeiro que todo mundo, siga a página e ative as notificação."
+  },
+  {
     "id": "DrSaudeNatural",
     "nomeExibido": "Dr. Saúde Natural",
     "avatar": null,
@@ -42,11 +56,25 @@
     "historico": "Órgão oficial do governo federal. Publica alertas sanitários e campanhas de vacinação."
   },
   {
+    "id": "PortalOfissial",
+    "nomeExibido": "Prefeitura de Vale Verde – Portal Ofissial",
+    "avatar": null,
+    "status": "NaoConfiavel",
+    "historico": "Canal de atendimento da prefeitura. Mantenha seus dados atualisados para não perder seus benefício."
+  },
+  {
     "id": "PrefeituraValeVerde",
     "nomeExibido": "Prefeitura de Vale Verde – Portal Oficial",
     "avatar": null,
     "status": "Confiavel",
     "historico": "Canal oficial da prefeitura, com endereço .gov.br. Publica decretos, avisos e campanhas públicas."
+  },
+  {
+    "id": "PrevidenciaSosial",
+    "nomeExibido": "Ministerio da Previdência Sosial",
+    "avatar": null,
+    "status": "NaoConfiavel",
+    "historico": "Pagina oficial do governo federal com as notícias mais importante para os aposentado. Compartilhe com todos os seus contato!"
   },
   {
     "id": "TiaMarcia",

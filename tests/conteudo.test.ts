@@ -18,22 +18,22 @@ function contar<T>(itens: T[]) {
 }
 
 describe("conteúdo migrado do Unity", () => {
-  it("tem 18 notícias, 11 fontes e 3 fases", () => {
-    expect(noticiasJson).toHaveLength(18);
-    expect(fontesJson).toHaveLength(11);
-    expect(fasesJson).toHaveLength(3);
+  it("tem 24 notícias, 15 fontes e 4 fases", () => {
+    expect(noticiasJson).toHaveLength(24);
+    expect(fontesJson).toHaveLength(15);
+    expect(fasesJson).toHaveLength(4);
   });
 
   it("mantém a distribuição de vereditos e dificuldades", () => {
     expect(contar(noticias.map((n) => n.veredito))).toEqual({
-      Verdadeira: 7,
-      Falsa: 7,
-      ParcialmenteVerdadeira: 4,
+      Verdadeira: 9,
+      Falsa: 10,
+      ParcialmenteVerdadeira: 5,
     });
-    expect(contar(noticias.map((n) => n.dificuldade))).toEqual({ Facil: 6, Media: 6, Dificil: 6 });
+    expect(contar(noticias.map((n) => n.dificuldade))).toEqual({ Facil: 6, Media: 6, Dificil: 12 });
   });
 
-  it("encadeia Fase 1 → Fase 2 → Fase 3, cada uma com 6 notícias", () => {
+  it("encadeia as 4 fases, cada uma com 6 notícias", () => {
     const nomes: string[] = [];
     let id: string | null = faseInicial;
     while (id) {
@@ -46,6 +46,7 @@ describe("conteúdo migrado do Unity", () => {
       "Fase 1 – Primeiros passos",
       "Fase 2 – Meia verdade",
       "Fase 3 – Caçador experiente",
+      "Fase 4 – Olho clínico",
     ]);
   });
 
@@ -93,5 +94,26 @@ describe("integridade dos dados", () => {
         n.id,
       ).toBe(true);
     }
+  });
+});
+
+describe("Fase 4 – Olho clínico", () => {
+  const fase4 = obterFase("Fase4");
+
+  it("esconde o status das fontes e tem dica; as outras fases não", () => {
+    expect(fase4.ocultarStatusDaFonte).toBe(true);
+    expect(fase4.dica).toContain("erros de português");
+    for (const id of ["Fase1", "Fase2", "Fase3"]) {
+      expect(obterFase(id).ocultarStatusDaFonte).toBe(false);
+      expect(obterFase(id).dica).toBe("");
+    }
+  });
+
+  it("mantém os erros de português propositais das fontes falsas", () => {
+    const nomes = fase4.noticias.map((n) => n.autor?.nomeExibido);
+    expect(nomes).toContain("Defeza Civil de Vale Verde");
+    expect(nomes).toContain("Ministerio da Previdência Sosial");
+    expect(nomes).toContain("Prefeitura de Vale Verde – Portal Ofissial");
+    expect(nomes).toContain("Portal Ciênsia Hoje");
   });
 });

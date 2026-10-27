@@ -1,6 +1,9 @@
 """Migra o conteúdo do projeto Unity (ScriptableObjects .asset) para os JSON em data/.
 
-Uso: python3 scripts/migrar_unity.py /caminho/para/projeto-unity
+Uso: python3 scripts/migrar_unity.py /caminho/para/projeto-unity [--so-dados]
+
+Com --so-dados, só atualiza data/*.json e não copia as imagens para public/img (útil quando a
+arte do projeto web já foi ajustada e não deve ser sobrescrita).
 
 Os textos são copiados na íntegra; apenas as referências por GUID viram ids legíveis
 (o m_Name do asset sem o prefixo "Noticia_" / "Fonte_").
@@ -19,6 +22,7 @@ VEREDITO = ["Verdadeira", "Falsa", "ParcialmenteVerdadeira"]
 DIFICULDADE = ["Facil", "Media", "Dificil"]
 
 raiz_unity = sys.argv[1]
+so_dados = "--so-dados" in sys.argv[2:]
 projeto = os.path.join(raiz_unity, "Assets", "_Project")
 destino = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -45,6 +49,8 @@ for png in glob.glob(os.path.join(projeto, "Art", "**", "*.png"), recursive=True
     sub = "noticias" if os.sep + "Noticias" + os.sep in png else "ui"
     publico = f"/img/{sub}/{os.path.basename(png)}"
     imagens[guid_de(png)] = publico
+    if so_dados:
+        continue
     alvo = os.path.join(destino, "public", publico.lstrip("/"))
     os.makedirs(os.path.dirname(alvo), exist_ok=True)
     shutil.copyfile(png, alvo)
@@ -112,6 +118,9 @@ fases = [
         "noticias": [ref(n, ids_noticia) for n in mb["noticias"]],
         "embaralhar": bool(mb["embaralhar"]),
         "proximaFase": ref(mb.get("proximaFase"), ids_fase),
+        # Regras especiais (opcionais no Unity): só entram no JSON quando usadas.
+        **({"ocultarStatusDaFonte": True} if mb.get("ocultarStatusDaFonte") else {}),
+        **({"dica": mb["dica"]} if (mb.get("dica") or "").strip() else {}),
     }
     for _, i, mb in fases_raw
 ]

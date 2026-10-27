@@ -49,6 +49,9 @@ export interface Fase {
   noticias: Noticia[];
   embaralhar: boolean;
   proximaFase: string | null;
+  // Regras especiais: esconder o status da fonte em "Consultar Referência" e dica da lâmpada.
+  ocultarStatusDaFonte: boolean;
+  dica: string;
 }
 
 export function statusTexto(status: StatusFonte): string {
@@ -251,6 +254,8 @@ export function montarConteudo(entrada: unknown): Conteudo {
         noticias: ids.map((n) => exigir(noticias, String(n), ctx)),
         embaralhar: o.embaralhar === true,
         proximaFase: opcional(o, "proximaFase", ctx),
+        ocultarStatusDaFonte: o.ocultarStatusDaFonte === true,
+        dica: texto(o, "dica", ctx, ""),
       };
     }),
     "fases",

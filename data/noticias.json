@@ -1,5 +1,41 @@
 [
   {
+    "id": "BarragemRompe",
+    "titulo": "URGENTE: barragem de Vale Verde vai romper hoje à noite",
+    "corpo": "A Defesa Civil alerta que a barragem do Rio Verde pode romper a qualquer momento. Moradores dos bairros próximos devem deixar suas casas imediatamente e repassar este aviso para todos.",
+    "imagem": "/img/noticias/canal_rede_social.png",
+    "nomeCanal": "Rede social (perfil @defezacivil.vv)",
+    "data": "22/09/2026",
+    "autor": "DefezaCivil",
+    "textoVerificarFonte": "O perfil foi criado há 3 dias e assina como \"Defeza Civil de Vale Verde\". Na publicação está escrito: \"evacuem as casa imediatamente, a situação é muito grave pra todos\".",
+    "textoPesquisar": "A Defesa Civil verdadeira (perfil verificado e site .gov.br) informou que a barragem passou por vistoria nesta semana e está segura. Nenhum alerta foi emitido.",
+    "veredito": "Falsa",
+    "dificuldade": "Dificil",
+    "explicacao": "A notícia é falsa. O perfil escreve \"Defeza\" com Z e erra a concordância (\"as casa\"). Alertas reais de emergência chegam por canais oficiais, como o SMS 40199 da Defesa Civil, e não por perfis recém-criados.",
+    "sinais": [
+      "erros-de-portugues",
+      "urgencia-artificial"
+    ]
+  },
+  {
+    "id": "CafeCoracao",
+    "titulo": "Estudo prova que 10 xícaras de café por dia protegem o coração",
+    "corpo": "Cientistas descobriram que o café faz bem para o coração. Segundo o estudo, quem toma 10 xícaras por dia nunca vai ter problemas cardíacos.",
+    "imagem": "/img/noticias/canal_blog.png",
+    "nomeCanal": "Site: ciensiahoje.net",
+    "data": "23/09/2026",
+    "autor": "CiensiaHoje",
+    "textoVerificarFonte": "O site assina como \"Portal Ciênsia Hoje\" e diz que os estudos são \"traduzido pela nossa equipe\". Os erros são discretos, mas estão lá.",
+    "textoPesquisar": "O estudo existe, mas encontrou só um efeito pequeno em quem toma de 2 a 3 xícaras por dia. Os próprios pesquisadores alertam que café em excesso pode fazer mal.",
+    "veredito": "ParcialmenteVerdadeira",
+    "dificuldade": "Dificil",
+    "explicacao": "É parcialmente verdadeira: o estudo é real, mas a manchete exagera e inventa a parte das 10 xícaras. A fonte também se entrega pelos erros: \"Ciênsia\" com S e \"estudos traduzido\" sem concordância. Exagerar um estudo verdadeiro continua sendo desinformação.",
+    "sinais": [
+      "manchete-distorcida",
+      "erros-de-portugues"
+    ]
+  },
+  {
     "id": "CelularCancer",
     "titulo": "Estudo comprova: usar celular causa câncer no cérebro",
     "corpo": "Cientistas confirmaram que a radiação do celular causa tumores. Pesquisa feita com ratos mostrou aumento de casos de câncer após exposição prolongada.",
@@ -66,6 +102,42 @@
     "explicacao": "O dado existiu, mas está desatualizado há mais de dez anos. Usar informação antiga como se fosse atual é uma forma comum de manipulação. Sempre confira a data e a origem de pesquisas e rankings.",
     "sinais": [
       "dado-desatualizado"
+    ]
+  },
+  {
+    "id": "CursinhoUFVV",
+    "titulo": "UFVV abre inscrições para cursinho pré-vestibular gratuito",
+    "corpo": "A Universidade Federal de Vale Verde abriu 300 vagas para o seu cursinho pré-vestibular gratuito. As inscrições vão até o dia 30 e são feitas apenas pelo site oficial da universidade.",
+    "imagem": "/img/noticias/canal_portal_oficial.png",
+    "nomeCanal": "Portal oficial: ufvv.edu.br",
+    "data": "24/09/2026",
+    "autor": "UniversidadeFederal",
+    "textoVerificarFonte": "O edital está publicado em ufvv.edu.br, com número, data e assinatura da Pró-Reitoria de Extensão. O texto não tem erros de português.",
+    "textoPesquisar": "O Jornal da Cidade e a Secretaria de Educação também divulgaram o cursinho, com o mesmo número de vagas e o mesmo prazo.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Dificil",
+    "explicacao": "A notícia é verdadeira. O edital está no site oficial, tem número e assinatura e foi confirmado por outras fontes confiáveis. Repare também que o texto da fonte é bem escrito: instituições sérias revisam o que publicam.",
+    "sinais": [
+      "texto-revisado",
+      "confirmacao-oficial"
+    ]
+  },
+  {
+    "id": "DecimoQuartoSalario",
+    "titulo": "Aposentados vão receber 14º salário ainda este mês",
+    "corpo": "Comunicado do governo: todos os aposentados e pensionistas vão receber um 14º salário até o fim do mês. Para garantir o pagamento, é preciso confirmar o cadastro no link da mensagem.",
+    "imagem": "/img/noticias/canal_whatsapp.png",
+    "nomeCanal": "WhatsApp (corrente encaminhada)",
+    "data": "20/09/2026",
+    "autor": "PrevidenciaSosial",
+    "textoVerificarFonte": "A mensagem termina assim: \"Atenciosamente, Ministerio da Previdência Sosial – orgão do governo federal\". O nome do órgão aparece escrito errado e sem acentos.",
+    "textoPesquisar": "O INSS publicou um alerta dizendo que não existe 14º salário aprovado e que nunca pede confirmação de cadastro por link de WhatsApp.",
+    "veredito": "Falsa",
+    "dificuldade": "Dificil",
+    "explicacao": "É um golpe. Órgãos públicos não escrevem o próprio nome errado: \"Sosial\" e \"Ministerio\" sem acento denunciam a fraude. Além disso, o link pede dados pessoais, um golpe clássico para roubar informações de aposentados.",
+    "sinais": [
+      "erros-de-portugues",
+      "golpe-financeiro"
     ]
   },
   {
@@ -174,6 +246,24 @@
     ]
   },
   {
+    "id": "RecadastramentoCPF",
+    "titulo": "Prefeitura vai multar quem não atualizar o CPF até sexta-feira",
+    "corpo": "Todos os moradores devem atualizar o cadastro do CPF no portal da prefeitura até sexta-feira. Quem não fizer o recadastramento vai pagar multa de R$ 500.",
+    "imagem": "/img/noticias/canal_portal_oficial.png",
+    "nomeCanal": "Site: valeverde-portalofissial.com",
+    "data": "25/09/2026",
+    "autor": "PortalOfissial",
+    "textoVerificarFonte": "O site imita o visual do portal da prefeitura, mas o endereço não termina em .gov.br. O rodapé diz: \"Prefeitura de Vale Verde – Portal Ofissial. Todos os direito reservado\".",
+    "textoPesquisar": "A prefeitura publicou uma nota no site oficial (valeverde.gov.br) avisando que não existe recadastramento de CPF e que esse site é falso.",
+    "veredito": "Falsa",
+    "dificuldade": "Dificil",
+    "explicacao": "É um golpe para roubar dados pessoais. O site clonado escreve \"Ofissial\" e \"todos os direito reservado\", erros que um portal oficial não cometeria. Na dúvida, digite você mesmo o endereço oficial no navegador em vez de clicar em links.",
+    "sinais": [
+      "site-clonado",
+      "erros-de-portugues"
+    ]
+  },
+  {
     "id": "RemedioFalsificado",
     "titulo": "Ministério da Saúde alerta para lote falsificado de remédio para pressão",
     "corpo": "O Ministério da Saúde e a Anvisa alertam que o lote 4521B do medicamento para hipertensão Pressalix é falsificado e deve ser devolvido à farmácia onde foi comprado.",
@@ -277,6 +367,24 @@
     "sinais": [
       "confirmacao-oficial",
       "detalhes-verificaveis"
+    ]
+  },
+  {
+    "id": "VacinaSarampo",
+    "titulo": "Campanha de vacinação contra o sarampo começa na segunda-feira",
+    "corpo": "O Ministério da Saúde informa que a campanha nacional de vacinação contra o sarampo começa na próxima segunda-feira. Crianças de 6 meses a 5 anos devem ir ao posto de saúde mais próximo com a caderneta de vacinação.",
+    "imagem": "/img/noticias/canal_portal_oficial.png",
+    "nomeCanal": "Portal oficial: gov.br/saude",
+    "data": "21/09/2026",
+    "autor": "MinisterioSaude",
+    "textoVerificarFonte": "O comunicado foi publicado no endereço oficial gov.br/saude e é assinado pela Secretaria de Vigilância em Saúde. O texto está bem escrito, sem nenhum erro de digitação.",
+    "textoPesquisar": "As secretarias de saúde do estado e da cidade divulgaram a mesma data, e os postos de Vale Verde já mostram cartazes da campanha.",
+    "veredito": "Verdadeira",
+    "dificuldade": "Dificil",
+    "explicacao": "A notícia é verdadeira: vem do canal oficial, foi confirmada por outros órgãos e o texto foi revisado com cuidado. Comunicados oficiais passam por revisão antes de serem publicados, por isso quase nunca têm erros de português.",
+    "sinais": [
+      "texto-revisado",
+      "confirmacao-oficial"
     ]
   },
   {

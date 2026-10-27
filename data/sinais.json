@@ -72,6 +72,12 @@
     "descricao": "Imagem real, mas de outro lugar ou de outra época. A busca reversa de imagens mostra de onde a foto veio."
   },
   {
+    "id": "erros-de-portugues",
+    "tipo": "alerta",
+    "nome": "Erros de português",
+    "descricao": "Nome do órgão escrito errado (\"Defeza\", \"Ofissial\"), falta de acento ou de concordância. Órgãos e veículos sérios revisam o que publicam; golpistas, quase nunca."
+  },
+  {
     "id": "confirmacao-oficial",
     "tipo": "boa-pratica",
     "nome": "Confirmação em fonte oficial",
@@ -88,5 +94,11 @@
     "tipo": "boa-pratica",
     "nome": "O conteúdo vale mais que a fonte",
     "descricao": "Fonte ruim pode acertar e fonte desconhecida pode dizer a verdade. Quem decide é a investigação, não só quem enviou."
+  },
+  {
+    "id": "texto-revisado",
+    "tipo": "boa-pratica",
+    "nome": "Texto revisado",
+    "descricao": "Comunicado bem escrito, com assinatura, número de documento e endereço oficial. Sozinho não prova nada, mas somado à confirmação em outras fontes é um bom sinal."
   }
 ]

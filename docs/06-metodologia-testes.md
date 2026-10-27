@@ -18,26 +18,29 @@ O projeto seguiu ciclos curtos e incrementais:
 
 ## Testes automatizados
 
-`npm test` roda 45 testes (Vitest) em três arquivos:
+`npm test` roda 56 testes (Vitest) em quatro arquivos:
 
 | Arquivo | O que garante |
 | --- | --- |
 | `tests/regras.test.ts` | Acerto por veredito (inclusive meia verdade), confiança com teto e piso, game over imediato, pontuação com bônus de sequência, limite e renovação das investigações, ordem das notícias, decisão única |
-| `tests/conteudo.test.ts` | Contagens do conteúdo original, distribuição de vereditos/dificuldades, cadeia de fases, ids únicos, campos preenchidos, formato da data, imagens existentes, todo sinal usado, notícia verdadeira com boa prática |
+| `tests/conteudo.test.ts` | Contagens do conteúdo original, regras especiais da Fase 4 e erros de português propositais das fontes, distribuição de vereditos/dificuldades, cadeia de fases, ids únicos, campos preenchidos, formato da data, imagens existentes, todo sinal usado, notícia verdadeira com boa prática |
+| `tests/classificacao.test.ts` | Selos da tela de conclusão: limites de 80% e 60% (inclusive), Especialista só sem erros |
 | `tests/pacote.test.ts` | Validação de pacotes do modo professor: pacote mínimo, campos opcionais e mensagens de erro para cada tipo de problema |
 
 Para confirmar que os testes detectam erros, uma regra foi alterada de propósito (perda por erro
 de 20 para 15): dois testes falharam, como esperado, e a regra foi restaurada.
 
-A CI (GitHub Actions) roda lint, verificação de tipos, testes e build a cada push.
+Antes de cada entrega, rode `npm run lint`, `npm run typecheck`, `npm test` e `npm run build`.
 
 ## Testes de navegador (realizados)
 
 Roteiros automatizados com Playwright, no build de produção:
 
 - **Jornada completa no computador:** menu → introdução → abertura → tutorial (4 passos) →
-  investigação por teclado → carimbo → explicação → 3 fases → certificado com nome → caderno
-  (15/15 sinais) → acessibilidade (alto contraste + texto grande) → nova partida.
+  investigação por teclado → carimbo → explicação → 4 fases → tela de conclusão com selo e
+  certificado com nome → caderno → acessibilidade (alto contraste + texto grande) → nova partida.
+- **Fase 4:** *Consultar Referência* sem status da fonte; balão de dica abrindo pelo clique e
+  fechando pela tecla D; conclusão com 20 de 24 acertos (83%) mostrando o selo Caçador voraz.
   Resultado: sem erros de JavaScript; 18 decisões registradas no relatório.
 - **Celular (iPhone 13):** menu, tutorial, investigação, decisão, explicação.
 - **Offline:** após a primeira visita, com a rede desligada, o jogo recarrega e a partida

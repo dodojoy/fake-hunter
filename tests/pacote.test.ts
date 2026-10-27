@@ -41,8 +41,8 @@ function erroDe(pacote: unknown) {
 describe("pacote de conteúdo (modo professor)", () => {
   it("o conteúdo original exportado como pacote volta igual", () => {
     const c = montarConteudo(JSON.parse(JSON.stringify(PACOTE_PADRAO)));
-    expect(c.totalNoticias).toBe(18);
-    expect(c.fases.size).toBe(3);
+    expect(c.totalNoticias).toBe(24);
+    expect(c.fases.size).toBe(4);
     expect(c.faseInicial).toBe("Fase1");
   });
 
@@ -52,6 +52,8 @@ describe("pacote de conteúdo (modo professor)", () => {
     expect(fase.descricao).toBe("");
     expect(fase.embaralhar).toBe(false);
     expect(fase.proximaFase).toBeNull();
+    expect(fase.ocultarStatusDaFonte).toBe(false);
+    expect(fase.dica).toBe("");
     expect(fase.noticias[0].imagem).toBeNull();
     expect(fase.noticias[0].autor?.nomeExibido).toBe("Grupo da escola");
     expect(c.sinais.length).toBeGreaterThan(0); // usa os sinais padrão

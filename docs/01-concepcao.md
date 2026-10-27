@@ -19,12 +19,12 @@ dos sinais certos e confirmar a informação antes de passá-la adiante.
 
 ## Objetivos de aprendizagem
 
-Ao final das três fases, o jogador deve ser capaz de:
+Ao final das quatro fases, o jogador deve ser capaz de:
 
 1. Reconhecer sinais clássicos de desinformação: fonte não identificada, prova ausente,
    urgência artificial, apelo emocional, cura milagrosa, golpe financeiro, boato reciclado,
-   exagero de fato real, dado desatualizado, manchete que distorce estudo, site clonado e foto
-   fora de contexto.
+   exagero de fato real, dado desatualizado, manchete que distorce estudo, site clonado, foto
+   fora de contexto e erros de português em nome de órgão ou veículo.
 2. Usar estratégias de verificação: conferir a procedência, consultar a reputação da fonte e
    buscar confirmação em fontes oficiais ou independentes.
 3. Entender que **meia verdade também é desinformação**.
@@ -33,7 +33,7 @@ Ao final das três fases, o jogador deve ser capaz de:
 
 ## Proposta
 
-Um jogo de decisão curto (3 fases de 6 notícias, cerca de 15 minutos) em que cada notícia é um
+Um jogo de decisão curto (4 fases de 6 notícias, cerca de 20 minutos) em que cada notícia é um
 pequeno caso de investigação. O aprendizado está no ciclo **decidir → receber a explicação**:
 depois de cada decisão, o jogo mostra o veredito, explica o porquê e destaca os sinais que
 entregavam a notícia. Esses sinais vão para um **Caderno do Checador**, que funciona como

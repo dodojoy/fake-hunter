@@ -62,25 +62,30 @@ export default function Menu({ onJogar }: { onJogar: () => void }) {
           merece ser compartilhada.
         </p>
         <nav aria-label="Menu principal" className="flex w-full max-w-xs flex-col gap-4">
-          <Botao cor="amarelo" className="text-2xl" onClick={onJogar} autoFocus>
+          <Botao cor="verde" icone="jogar" className="text-3xl" onClick={onJogar} autoFocus>
             Jogar
           </Botao>
-          <Botao cor="azul" className="text-lg" onClick={() => setPainel("comoJogar")}>
+          <Botao
+            cor="azul"
+            icone="ajuda"
+            className="text-2xl"
+            onClick={() => setPainel("comoJogar")}
+          >
             Como jogar
           </Botao>
-          <Botao cor="azul" className="text-lg" onClick={() => setPainel("caderno")}>
+          <Botao cor="azul" className="text-2xl" onClick={() => setPainel("caderno")}>
             Caderno do Checador
           </Botao>
-          <Botao cor="azul" className="text-lg" onClick={() => setPainel("acessibilidade")}>
+          <Botao cor="azul" className="text-2xl" onClick={() => setPainel("acessibilidade")}>
             Acessibilidade
           </Botao>
-          <Botao cor="azul" className="text-lg" onClick={() => setPainel("relatorio")}>
+          <Botao cor="azul" className="text-2xl" onClick={() => setPainel("relatorio")}>
             Relatório de partidas
           </Botao>
-          <Botao cor="azul" className="text-lg" onClick={() => setPainel("professor")}>
+          <Botao cor="azul" className="text-2xl" onClick={() => setPainel("professor")}>
             Modo professor
           </Botao>
-          <Botao cor="claro" className="text-lg" onClick={sair}>
+          <Botao cor="vermelho" icone="sair" className="text-2xl" onClick={sair}>
             Sair
           </Botao>
         </nav>
@@ -133,13 +138,17 @@ export default function Menu({ onJogar }: { onJogar: () => void }) {
                     <span>Ouvir a notícia em voz alta</span>
                   </li>
                   <li className="contents">
+                    <kbd className="font-bold">D</kbd>
+                    <span>Abrir a dica (nas fases que têm dica)</span>
+                  </li>
+                  <li className="contents">
                     <kbd className="font-bold">Esc</kbd>
                     <span>Pausar / fechar painéis</span>
                   </li>
                 </ul>
               </div>
             </div>
-            <Botao cor="azul" className="text-lg" onClick={fechar} autoFocus>
+            <Botao cor="amarelo" icone="fechar" className="text-xl" onClick={fechar} autoFocus>
               Fechar
             </Botao>
           </Painel>
@@ -150,7 +159,7 @@ export default function Menu({ onJogar }: { onJogar: () => void }) {
         <Modal rotulo="Caderno do Checador" onFechar={fechar}>
           <Painel titulo="Caderno do Checador">
             <Caderno />
-            <Botao cor="azul" className="text-lg" onClick={fechar} autoFocus>
+            <Botao cor="amarelo" icone="fechar" className="text-xl" onClick={fechar} autoFocus>
               Fechar
             </Botao>
           </Painel>
@@ -161,7 +170,7 @@ export default function Menu({ onJogar }: { onJogar: () => void }) {
         <Modal rotulo="Relatório de partidas" onFechar={fechar}>
           <Painel titulo="Relatório de partidas" largura="max-w-3xl">
             <Relatorio />
-            <Botao cor="azul" className="text-lg" onClick={fechar} autoFocus>
+            <Botao cor="amarelo" icone="fechar" className="text-xl" onClick={fechar} autoFocus>
               Fechar
             </Botao>
           </Painel>
@@ -172,7 +181,7 @@ export default function Menu({ onJogar }: { onJogar: () => void }) {
         <Modal rotulo="Modo professor" onFechar={fechar}>
           <Painel titulo="Modo professor">
             <ModoProfessor />
-            <Botao cor="azul" className="text-lg" onClick={fechar} autoFocus>
+            <Botao cor="amarelo" icone="fechar" className="text-xl" onClick={fechar} autoFocus>
               Fechar
             </Botao>
           </Painel>
@@ -183,7 +192,7 @@ export default function Menu({ onJogar }: { onJogar: () => void }) {
         <Modal rotulo="Acessibilidade" onFechar={fechar}>
           <Painel titulo="Acessibilidade">
             <OpcoesAcessibilidade />
-            <Botao cor="azul" className="text-lg" onClick={fechar} autoFocus>
+            <Botao cor="amarelo" icone="fechar" className="text-xl" onClick={fechar} autoFocus>
               Fechar
             </Botao>
           </Painel>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Nunito, Lilita_One } from "next/font/google";
+import { Bebas_Neue, Nunito } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -7,7 +7,8 @@ const nunito = Nunito({
   subsets: ["latin"],
 });
 
-const titulo = Lilita_One({
+// Mesma tipografia do protótipo: Bebas Neue em títulos e botões, Nunito no texto.
+const titulo = Bebas_Neue({
   variable: "--font-titulo",
   weight: "400",
   subsets: ["latin"],

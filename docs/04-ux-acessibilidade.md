@@ -5,6 +5,14 @@
 Tema de redação de jornal e mural de investigação: cartão de papel com fita adesiva e clipe,
 carimbo de veredito, post-its, lupa. Ilustração flat/cartoon, reaproveitada do protótipo.
 
+- **Tipografia:** Bebas Neue em títulos e botões, Nunito no texto (as mesmas do protótipo, ambas
+  com licença OFL, carregadas pelo `next/font`).
+- **Ícones:** [Lucide](https://lucide.dev) nos botões (licença ISC, em
+  `public/img/ui/icones/LICENCA_lucide.txt`), brancos nos botões escuros e azuis nos claros;
+  selos redondos na HUD e no veredito; selos de classificação na tela de conclusão.
+- **Cores dos botões:** verde para avançar/jogar, vermelho para bloquear/sair, azul para
+  investigar/repetir, amarelo para menu, fechar e próxima notícia.
+
 | Cor | Hex | Uso |
 | --- | --- | --- |
 | Azul-marinho | `#1B2A41` | Fundos, HUD, bordas |

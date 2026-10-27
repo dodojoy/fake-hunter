@@ -99,6 +99,6 @@ navegador em modo offline). O service worker só é registrado no build de produ
 ### Qualidade
 
 - `npm run lint` (ESLint com regras do React/Next), `npm run typecheck` (TypeScript estrito),
-  `npm test` (Vitest) e `npm run build` rodam na CI do GitHub Actions
-  ([`.github/workflows/ci.yml`](../.github/workflows/ci.yml)) a cada push e pull request.
+  `npm test` (Vitest) e `npm run build` devem ser rodados antes de cada entrega (não há CI
+  automática, para economizar minutos do GitHub Actions).
 - Código formatado com Prettier (largura 100).

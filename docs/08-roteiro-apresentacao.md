@@ -9,9 +9,9 @@ tutorial) e deixe um pacote de exemplo do modo professor pronto.
 | 0–1 min | Problema | Um caso real conhecido de boato que causou dano; a pergunta "você checaria?" |
 | 1–2 min | Proposta | Jogador como checador de fatos; objetivo: praticar sinais, não decorar respostas |
 | 2–5 min | Demonstração | Introdução → tutorial → investigar "Feriadão amanhã?" → decidir → carimbo e explicação |
-| 5–6 min | Casos-armadilha | Fase 3: o alerta de remédio verdadeiro vindo de fonte não confiável |
+| 5–6 min | Casos-armadilha | Fase 3: alerta de remédio verdadeiro vindo de fonte não confiável; Fase 4: ficha sem status e fontes que escrevem errado |
 | 6–7 min | Acessibilidade | Alto contraste + texto grande; botão "Ouvir"; jogar só pelo teclado; abrir no celular |
-| 7–8 min | Técnica | Regras puras + conteúdo em JSON; 45 testes; CI; PWA offline; Lighthouse 96/100 |
+| 7–8 min | Técnica | Regras puras + conteúdo em JSON; 56 testes; PWA offline; Lighthouse 96/100 |
 | 8–9 min | Impacto | Modo professor (carregar um pacote da turma); relatório e CSV; certificado |
 | 9–10 min | Reflexão | Limitações honestas e próximos passos |
 

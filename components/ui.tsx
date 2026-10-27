@@ -39,12 +39,49 @@ export function Icone({
 
 type Cor = "azul" | "verde" | "vermelho" | "amarelo" | "claro";
 
+type IconeBotao =
+  | "ajuda"
+  | "compartilhar"
+  | "consultar_referencia"
+  | "fechar"
+  | "jogar"
+  | "menu"
+  | "nao_propagar"
+  | "pesquisar"
+  | "proxima"
+  | "repetir"
+  | "sair"
+  | "verificar_fonte";
+
 interface BotaoProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   cor: Cor;
+  icone?: IconeBotao; // ícones Lucide de public/img/ui/icones
+  iconeADireita?: boolean;
   atalho?: string; // tecla exibida como dica (só para quem usa teclado)
 }
 
-export function Botao({ cor, atalho, className = "", onClick, children, ...resto }: BotaoProps) {
+export function Botao({
+  cor,
+  icone,
+  iconeADireita = false,
+  atalho,
+  className = "",
+  onClick,
+  children,
+  ...resto
+}: BotaoProps) {
+  // Ícone branco nos botões escuros, azul-marinho nos claros (mesma regra do protótipo).
+  const variante = cor === "amarelo" || cor === "claro" ? "azul" : "branco";
+  const imagem = icone && (
+    <Image
+      src={`/img/ui/icones/ico_${icone}_${variante}.png`}
+      alt=""
+      width={128}
+      height={128}
+      className="shrink-0"
+      style={{ width: "1.3em", height: "1.3em" }}
+    />
+  );
   return (
     <button
       type="button"
@@ -56,7 +93,9 @@ export function Botao({ cor, atalho, className = "", onClick, children, ...resto
       }}
       {...resto}
     >
+      {!iconeADireita && imagem}
       {children}
+      {iconeADireita && imagem}
       {atalho && (
         <kbd className="atalho so-teclado" aria-hidden>
           {atalho}

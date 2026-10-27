@@ -94,138 +94,143 @@ body {
    Ficam em @layer components para que as utilidades do Tailwind (absolute, px-2...)
    possam sobrescrevê-los. */
 @layer components {
-/* Papel (cartão de notícia e painéis): desenhado em CSS; a fita e o clipe são recortes
+  /* Papel (cartão de notícia e painéis): desenhado em CSS; a fita e o clipe são recortes
    transparentes do sprite painel_noticia.png (fita.png e clipe.png). */
-.papel {
-  position: relative;
-  background: var(--papel-fundo);
-  color: var(--papel-texto);
-  border: 3px solid var(--borda-papel);
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgb(0 0 0 / 0.45);
-}
-.papel::before,
-.papel::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.papel::before {
-  /* fita adesiva na quina superior esquerda */
-  left: -22px;
-  top: -20px;
-  width: 84px;
-  height: 60px;
-  background-image: url("/img/ui/fita.png");
-}
-.papel::after {
-  /* clipe preso na borda superior direita */
-  right: 14px;
-  top: -18px;
-  width: 26px;
-  height: 59px;
-  background-image: url("/img/ui/clipe.png");
-}
-:root[data-contraste="alto"] .papel::before,
-:root[data-contraste="alto"] .papel::after {
-  display: none;
-}
-
-/* ---------- Botões ----------
-   Pílula com "degrau" embaixo, no estilo dos sprites originais. */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  min-height: 3rem; /* alvo de toque confortável */
-  padding: 0.6rem 1.4rem;
-  border: 3px solid var(--marinho);
-  border-radius: 999px;
-  box-shadow: 0 5px 0 var(--marinho);
-  font-weight: 800;
-  line-height: 1.15;
-  cursor: pointer;
-  transition:
-    transform 80ms ease,
-    box-shadow 80ms ease,
-    filter 120ms ease;
-}
-.btn:not(:disabled):hover {
-  filter: brightness(1.08);
-}
-.btn:not(:disabled):active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 0 var(--marinho);
-}
-.btn:disabled {
-  filter: grayscale(0.9);
-  opacity: 0.55;
-  cursor: not-allowed;
-}
-.btn-azul {
-  background: var(--azul);
-  color: #fff;
-}
-.btn-verde {
-  background: var(--verde);
-  color: #fff;
-}
-.btn-vermelho {
-  background: var(--vermelho);
-  color: #fff;
-}
-.btn-amarelo {
-  background: var(--amarelo);
-  color: var(--marinho);
-}
-.btn-claro {
-  background: var(--papel);
-  color: var(--marinho);
-}
-.btn-verde,
-.btn-vermelho,
-.btn-azul {
-  text-shadow: 0 1px 2px rgb(0 0 0 / 0.35);
-}
-:root[data-contraste="alto"] .btn {
-  border-color: #fff;
-  box-shadow: 0 4px 0 #fff;
-}
-:root[data-contraste="alto"] .btn-amarelo {
-  background: #ffde00;
-  color: #000;
-}
-:root[data-contraste="alto"] .btn-claro {
-  background: #fff;
-  color: #000;
-  border-color: #000;
-}
-
-/* Dicas de atalho de teclado só aparecem em quem usa mouse/teclado. */
-.so-teclado {
-  display: none;
-}
-@media (hover: hover) and (pointer: fine) {
-  .so-teclado {
-    display: inline-flex;
+  .papel {
+    position: relative;
+    background: var(--papel-fundo);
+    color: var(--papel-texto);
+    border: 3px solid var(--borda-papel);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.45);
   }
-}
-kbd.atalho {
-  align-items: center;
-  justify-content: center;
-  min-width: 1.6em;
-  padding: 0 0.35em;
-  border: 2px solid currentColor;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 0.75em;
-  font-weight: 800;
-  opacity: 0.85;
-}
+  .papel::before,
+  .papel::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .papel::before {
+    /* fita adesiva na quina superior esquerda */
+    left: -22px;
+    top: -20px;
+    width: 84px;
+    height: 60px;
+    background-image: url("/img/ui/fita.png");
+  }
+  .papel::after {
+    /* clipe preso na borda superior direita */
+    right: 14px;
+    top: -18px;
+    width: 26px;
+    height: 59px;
+    background-image: url("/img/ui/clipe.png");
+  }
+  :root[data-contraste="alto"] .papel::before,
+  :root[data-contraste="alto"] .papel::after {
+    display: none;
+  }
 
+  /* ---------- Botões ----------
+   Pílula com "degrau" embaixo, no estilo dos sprites originais. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3rem; /* alvo de toque confortável */
+    padding: 0.6rem 1.4rem;
+    border: 3px solid var(--marinho);
+    border-radius: 999px;
+    box-shadow: 0 5px 0 var(--marinho);
+    font-family: var(--font-titulo);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    cursor: pointer;
+    transition:
+      transform 80ms ease,
+      box-shadow 80ms ease,
+      filter 120ms ease;
+  }
+  .btn:not(:disabled):hover {
+    filter: brightness(1.08);
+  }
+  .btn:not(:disabled):active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 var(--marinho);
+  }
+  .btn:disabled {
+    filter: grayscale(0.9);
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .btn-azul {
+    background: var(--azul);
+    color: #fff;
+  }
+  .btn-verde {
+    background: var(--verde);
+    color: #fff;
+  }
+  .btn-vermelho {
+    background: var(--vermelho);
+    color: #fff;
+  }
+  .btn-amarelo {
+    background: var(--amarelo);
+    color: var(--marinho);
+  }
+  .btn-claro {
+    background: var(--papel);
+    color: var(--marinho);
+  }
+  .btn-verde,
+  .btn-vermelho,
+  .btn-azul {
+    text-shadow: 0 2px 0 rgb(0 0 0 / 0.3);
+  }
+  /* Bebas Neue é condensada: um pouco de espaço entre letras melhora a leitura. */
+  .font-titulo {
+    letter-spacing: 0.02em;
+  }
+  :root[data-contraste="alto"] .btn {
+    border-color: #fff;
+    box-shadow: 0 4px 0 #fff;
+  }
+  :root[data-contraste="alto"] .btn-amarelo {
+    background: #ffde00;
+    color: #000;
+  }
+  :root[data-contraste="alto"] .btn-claro {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+  }
+
+  /* Dicas de atalho de teclado só aparecem em quem usa mouse/teclado. */
+  .so-teclado {
+    display: none;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .so-teclado {
+      display: inline-flex;
+    }
+  }
+  kbd.atalho {
+    align-items: center;
+    justify-content: center;
+    min-width: 1.6em;
+    padding: 0 0.35em;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.75em;
+    font-weight: 800;
+    opacity: 0.85;
+  }
 } /* fim de @layer components */
 
 /* ---------- Animações ---------- */

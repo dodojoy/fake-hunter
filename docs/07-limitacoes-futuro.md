@@ -15,12 +15,11 @@
 
 | Limitação | Impacto | Possível solução |
 | --- | --- | --- |
-| Conteúdo fixo e curto (18 notícias) | Rejogar fica previsível; quem joga duas vezes decora | Mais pacotes; embaralhar; banco de notícias por tema |
+| Conteúdo fixo e curto (24 notícias) | Rejogar fica previsível; quem joga duas vezes decora | Mais pacotes; embaralhar; banco de notícias por tema |
 | Investigações são textos prontos | O jogador não pratica a busca real (Google, busca reversa de imagem) | Fase extra com links para ferramentas reais de checagem |
 | Decisão binária | "Não propagar" junta "falso" e "meia verdade"; não pede justificativa | Pedir ao jogador qual sinal identificou antes de revelar |
 | Sem servidor | Relatório e progresso ficam em cada navegador; o professor não vê a turma de forma centralizada | Exportar CSV (já existe); futuramente um painel da turma |
 | Voz depende do navegador | Qualidade e disponibilidade da voz em pt-BR variam por aparelho | Gravar narração dos textos |
-| Áudio original ausente | Os MP3 do protótipo não estavam no repositório; os efeitos são bipes sintetizados | Adicionar os arquivos em `public/audio/` (o jogo já os usa se existirem) |
 | Leitor de tela testado só via auditoria | Acessibilidade 100 no Lighthouse não substitui teste com quem usa leitor de tela | Testar com NVDA/TalkBack e pessoas cegas |
 | Cidade fictícia | Evita polarização, mas pode parecer distante do dia a dia | Pacotes locais pelo modo professor |
 | Sem RA/RV | Não explora tecnologias imersivas | Ver "Expansão" |
@@ -58,4 +57,4 @@
    pacotes em outros idiomas.
 6. **Realidade aumentada:** apontar a câmera para um cartaz ou panfleto impresso e investigar a
    "notícia" no celular, levando o jogo para fora da tela.
-7. **Narração gravada** e **mais sons** para substituir os sintetizados.
+7. **Narração gravada** para substituir a voz sintética do navegador.
