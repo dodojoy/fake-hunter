@@ -38,15 +38,15 @@ export default function Certificado({
   const selo = SELOS[calcularSelo(acertos, erros)];
 
   return (
-    <div className="flex min-h-dvh flex-col items-center justify-center gap-6 px-4 py-10">
+    <div className="tela-certificado flex min-h-dvh flex-col items-center justify-center gap-6 px-4 py-10">
       <Fundo src="/img/ui/bg_fimdefase.png" />
 
       <article
         aria-labelledby="cert-titulo"
         className="imprimir papel surgir w-full max-w-3xl px-5 pt-12 pb-10 text-center sm:px-12"
       >
-        <div className="rounded-xl border-4 border-double border-papel-texto/60 px-4 py-8 sm:px-8">
-          <p className="text-sm font-bold tracking-[0.2em] uppercase">Vale Verde Checa</p>
+        <div className="rounded-xl border-4 border-double border-papel-texto/60 px-4 py-8 sm:px-8 print:py-5">
+          <p className="text-sm font-bold tracking-[0.2em] uppercase">Paulo Afonso Checa</p>
           <h1 id="cert-titulo" className="mt-1 font-titulo text-4xl text-azul sm:text-6xl">
             Jornada concluída!
           </h1>
@@ -57,7 +57,7 @@ export default function Certificado({
             width={512}
             height={512}
             priority
-            className="mx-auto mt-4 h-auto w-40 drop-shadow-lg sm:w-48"
+            className="mx-auto mt-4 h-auto w-40 drop-shadow-lg sm:w-48 print:mt-2 print:w-32"
           />
           <p className="font-titulo text-4xl sm:text-5xl" style={{ color: selo.cor }}>
             <span className="sr-only">Selo recebido: </span>
@@ -65,7 +65,7 @@ export default function Certificado({
           </p>
           <p className="mx-auto mt-2 max-w-lg text-lg">{selo.descricao}</p>
 
-          <table className="mx-auto mt-6 w-full max-w-md text-lg">
+          <table className="mx-auto mt-6 w-full max-w-md text-lg print:mt-3">
             <caption className="sr-only">Resultado por fase</caption>
             <thead>
               <tr className="border-b-2 border-papel-texto/30">
@@ -112,14 +112,14 @@ export default function Certificado({
             </b>
           </p>
 
-          <div className="mt-8 border-t-2 border-dashed border-papel-texto/30 pt-6">
+          <div className="mt-8 border-t-2 border-dashed border-papel-texto/30 pt-6 print:mt-4 print:pt-4">
             <p className="text-lg">Certificamos que</p>
             <p className="mx-auto mt-1 min-h-[1.5em] max-w-lg border-b-2 border-papel-texto font-titulo text-4xl">
               {nome.trim() || " "}
             </p>
             <p className="mx-auto mt-3 max-w-xl text-lg leading-relaxed">
               concluiu as {jornada.length} fases do Fake Hunter como checador(a) de fatos da
-              comunidade de Vale Verde.
+              comunidade de Paulo Afonso.
             </p>
             <p className="mt-2 text-sm">{hoje}</p>
           </div>

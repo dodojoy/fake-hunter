@@ -111,7 +111,7 @@ export interface Conteudo {
 
 export const PACOTE_PADRAO: Pacote = {
   id: "padrao",
-  titulo: "Vale Verde (conteúdo original)",
+  titulo: "Paulo Afonso (conteúdo original)",
   sinais: sinaisJson,
   fontes: fontesJson,
   noticias: noticiasJson,

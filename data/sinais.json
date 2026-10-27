@@ -75,7 +75,7 @@
     "id": "erros-de-portugues",
     "tipo": "alerta",
     "nome": "Erros de português",
-    "descricao": "Nome do órgão escrito errado (\"Defeza\", \"Ofissial\"), falta de acento ou de concordância. Órgãos e veículos sérios revisam o que publicam; golpistas, quase nunca."
+    "descricao": "Erros discretos nos textos de quem diz ser órgão oficial ou veículo sério: \"atravéz\", \"Seje\", \"afim de\", crase errada, falta de acento. Quem é sério revisa o que publica; golpistas copiam o nome certo, mas escorregam no texto."
   },
   {
     "id": "confirmacao-oficial",

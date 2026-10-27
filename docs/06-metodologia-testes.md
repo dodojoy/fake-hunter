@@ -18,13 +18,13 @@ O projeto seguiu ciclos curtos e incrementais:
 
 ## Testes automatizados
 
-`npm test` roda 56 testes (Vitest) em quatro arquivos:
+`npm test` roda 58 testes (Vitest) em quatro arquivos:
 
 | Arquivo | O que garante |
 | --- | --- |
 | `tests/regras.test.ts` | Acerto por veredito (inclusive meia verdade), confiança com teto e piso, game over imediato, pontuação com bônus de sequência, limite e renovação das investigações, ordem das notícias, decisão única |
 | `tests/conteudo.test.ts` | Contagens do conteúdo original, regras especiais da Fase 4 e erros de português propositais das fontes, distribuição de vereditos/dificuldades, cadeia de fases, ids únicos, campos preenchidos, formato da data, imagens existentes, todo sinal usado, notícia verdadeira com boa prática |
-| `tests/classificacao.test.ts` | Selos da tela de conclusão: limites de 80% e 60% (inclusive), Especialista só sem erros |
+| `tests/classificacao.test.ts` | Selos da tela de conclusão: limites de 80% e 60% (inclusive), Especialista só sem erros; a página de selos do Como jogar não revela números |
 | `tests/pacote.test.ts` | Validação de pacotes do modo professor: pacote mínimo, campos opcionais e mensagens de erro para cada tipo de problema |
 
 Para confirmar que os testes detectam erros, uma regra foi alterada de propósito (perda por erro

@@ -114,7 +114,7 @@ Menu → **Modo professor**:
    próprio (ex.: `"turma-8a"`).
 3. **Carregar pacote** valida o arquivo. Se houver erro, a mensagem diz qual é, por exemplo:
    `Notícia "n3": "veredito" deve ser "Verdadeira", "Falsa", "ParcialmenteVerdadeira" (veio "Talvez").`
-4. O pacote fica salvo no navegador; **Voltar ao original** restaura as notícias de Vale Verde.
+4. O pacote fica salvo no navegador; **Voltar ao original** restaura as notícias originais.
 
 Cada pacote tem seus próprios recordes, caderno e relatório, separados pelo `id`.
 

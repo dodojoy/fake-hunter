@@ -21,7 +21,7 @@
 | Sem servidor | Relatório e progresso ficam em cada navegador; o professor não vê a turma de forma centralizada | Exportar CSV (já existe); futuramente um painel da turma |
 | Voz depende do navegador | Qualidade e disponibilidade da voz em pt-BR variam por aparelho | Gravar narração dos textos |
 | Leitor de tela testado só via auditoria | Acessibilidade 100 no Lighthouse não substitui teste com quem usa leitor de tela | Testar com NVDA/TalkBack e pessoas cegas |
-| Cidade fictícia | Evita polarização, mas pode parecer distante do dia a dia | Pacotes locais pelo modo professor |
+| Cidade real, casos inventados | Aproxima o jogo do público, mas notícias inventadas sobre uma cidade real (ex.: "prefeito investigado") podem ser confundidas com fatos se forem tiradas do contexto do jogo | Deixar claro na abertura e na documentação que os casos são fictícios; pacotes de outras cidades pelo modo professor |
 | Sem RA/RV | Não explora tecnologias imersivas | Ver "Expansão" |
 | Avaliação com usuários pendente | Ainda não há evidência medida de aprendizagem | Aplicar o [roteiro](06-metodologia-testes.md#roteiro-de-teste-com-usuários) |
 

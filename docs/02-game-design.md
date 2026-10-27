@@ -2,8 +2,8 @@
 
 ## Narrativa
 
-O jogador é contratado pelo **Vale Verde Checa**, a agência de checagem da cidade fictícia de
-Vale Verde. A coordenadora, Marta Ribeiro, apresenta a missão numa mensagem de boas-vindas e
+O jogador é contratado pelo **Paulo Afonso Checa**, uma agência de checagem (fictícia) da cidade
+de Paulo Afonso, na Bahia. A coordenadora, Marta Ribeiro, apresenta a missão numa mensagem de boas-vindas e
 reaparece na abertura de cada fase, comentando a evolução dos boatos:
 
 | Fase | Tema | Abertura (resumo) |
@@ -85,9 +85,10 @@ Exemplo verificado em teste: acertar as 6 notícias da Fase 1 dá **975 pontos**
 ### Regras especiais por fase
 
 - `ocultarStatusDaFonte`: *Consultar Referência* mostra o nome e o histórico da fonte, mas não
-  diz se ela é confiável. Usado na Fase 4, em que as fontes falsas imitam órgãos oficiais e se
-  entregam por erros de português ("Defeza Civil", "Portal Ofissial", "Ministerio da Previdência
-  Sosial", "Portal Ciênsia Hoje").
+  diz se ela é confiável. Usado na Fase 4, em que as fontes falsas copiam o nome de órgãos
+  oficiais ("Defesa Civil de Paulo Afonso", "Ministério da Previdência Social") e só se entregam
+  por erros sutis nos textos que escrevem ("atravéz", "Seje", "afim de", crase errada). As
+  investigações mostram esses textos sem apontar o erro: o jogador precisa perceber sozinho.
 - `dica`: mostra um botão de lâmpada (atalho **D**) que abre um balão com a dica da fase. O balão
   fecha ao decidir e ao passar para a próxima notícia.
 
@@ -117,9 +118,10 @@ Todas essas regras estão em [`lib/regras.ts`](../lib/regras.ts) e cobertas por
 ## Conteúdo
 
 24 notícias (9 verdadeiras, 10 falsas, 5 parcialmente verdadeiras; 6 fáceis, 6 médias e 12
-difíceis), 15 fontes e 17 sinais no Caderno do Checador (13 sinais de alerta e 4 boas
+difíceis), 20 fontes e 17 sinais no Caderno do Checador (13 sinais de alerta e 4 boas
 práticas). Os textos das notícias e das fontes vieram na íntegra do protótipo em Unity (a Fase 4
-veio da branch `feature/fase4-conclusao`).
+veio da branch `feature/fase4-conclusao`, e a revisão de dificuldade, a troca para Paulo Afonso e
+a página de selos, da `feature/dificuldade-selos`).
 
 ### Casos de destaque
 
@@ -130,6 +132,6 @@ veio da branch `feature/fase4-conclusao`).
 | Prefeito investigado (Fase 3) | Usa o nome do jornal confiável num **site clonado** |
 | Ônibus de graça (Fase 2) | Fato real **exagerado** ("todos os domingos"): meia verdade |
 | Celular causa câncer (Fase 2) | Estudo real em ratos, **manchete distorcida** |
-| 14º salário (Fase 4) | Golpe assinado por "Ministerio da Previdência **Sosial**" |
-| Café e coração (Fase 4) | Estudo real exagerado por um site que escreve "Ciên**s**ia" |
-| Cursinho UFVV (Fase 4) | Verdadeira: sem status da fonte, o jogador confia no texto revisado e na confirmação |
+| 14º salário (Fase 4) | Nome do ministério certo, mas o texto escreve "atravé**z**" e "**à** partir" |
+| Café e coração (Fase 4) | Estudo real exagerado por um site que escreve "missão **e** levar" e "**afim** de" |
+| Cursinho UFPAF (Fase 4) | Verdadeira: sem status da fonte, o jogador confia no texto sem erros e na confirmação |

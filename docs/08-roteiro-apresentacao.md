@@ -11,7 +11,7 @@ tutorial) e deixe um pacote de exemplo do modo professor pronto.
 | 2–5 min | Demonstração | Introdução → tutorial → investigar "Feriadão amanhã?" → decidir → carimbo e explicação |
 | 5–6 min | Casos-armadilha | Fase 3: alerta de remédio verdadeiro vindo de fonte não confiável; Fase 4: ficha sem status e fontes que escrevem errado |
 | 6–7 min | Acessibilidade | Alto contraste + texto grande; botão "Ouvir"; jogar só pelo teclado; abrir no celular |
-| 7–8 min | Técnica | Regras puras + conteúdo em JSON; 56 testes; PWA offline; Lighthouse 96/100 |
+| 7–8 min | Técnica | Regras puras + conteúdo em JSON; 58 testes; PWA offline; Lighthouse 96/100 |
 | 8–9 min | Impacto | Modo professor (carregar um pacote da turma); relatório e CSV; certificado |
 | 9–10 min | Reflexão | Limitações honestas e próximos passos |
 

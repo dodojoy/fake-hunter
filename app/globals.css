@@ -317,20 +317,38 @@ body {
 
 /* ---------- Impressão: só o certificado ---------- */
 @media print {
-  body * {
-    visibility: hidden;
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
   }
-  .imprimir,
-  .imprimir * {
-    visibility: visible;
+  html,
+  body {
+    min-height: 0 !important;
+    background: #fff !important;
+  }
+  /* O resto da página sai do layout (display: none, não só invisível); senão continua ocupando
+     espaço e gera páginas extras em branco ou com o fundo escuro. */
+  body > :not(.tela-certificado),
+  .tela-certificado > :not(.imprimir),
+  .imprimir .nao-imprimir {
+    display: none !important;
+  }
+  .tela-certificado {
+    display: block !important;
+    min-height: 0 !important;
+    padding: 0 !important;
   }
   .imprimir {
-    position: absolute;
-    inset: 0;
-    margin: 0;
-    box-shadow: none;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    animation: none !important;
+    break-inside: avoid;
   }
-  .imprimir .nao-imprimir {
-    display: none;
+  .imprimir::before,
+  .imprimir::after {
+    display: none !important;
   }
 }

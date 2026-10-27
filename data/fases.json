@@ -13,7 +13,7 @@
     ],
     "embaralhar": false,
     "proximaFase": "Fase2",
-    "abertura": "Primeiro dia no Vale Verde Checa! Vamos começar com casos simples. Leia com calma e use as ferramentas de investigação antes de decidir."
+    "abertura": "Primeiro dia no Paulo Afonso Checa! Vamos começar com casos simples. Leia com calma e use as ferramentas de investigação antes de decidir."
   },
   {
     "id": "Fase2",
@@ -50,7 +50,7 @@
   {
     "id": "Fase4",
     "nomeFase": "Fase 4 – Olho clínico",
-    "descricao": "Última fase! A ficha das fontes não mostra mais se elas são confiáveis. Desconfie de quem escreve errado.",
+    "descricao": "Última fase! A ficha das fontes não mostra mais se elas são confiáveis. Leia com atenção tudo o que elas escrevem.",
     "noticias": [
       "DecimoQuartoSalario",
       "VacinaSarampo",
@@ -62,7 +62,7 @@
     "embaralhar": false,
     "proximaFase": null,
     "ocultarStatusDaFonte": true,
-    "dica": "Nesta fase a ficha da fonte não mostra se ela é confiável. Veículos e órgãos sérios revisam o que publicam: erros de português no nome ou nos textos da fonte são sinal de golpe.",
+    "dica": "Nesta fase a ficha da fonte não mostra se ela é confiável. Leia com atenção tudo o que a fonte escreve: quem é sério revisa o que publica.",
     "abertura": "Última missão! Os golpistas agora copiam até o nome dos órgãos oficiais, e a ficha das fontes não diz mais quem é confiável. Leia com atenção como cada uma escreve: quem trabalha sério revisa o que publica."
   }
 ]

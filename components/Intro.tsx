@@ -4,7 +4,7 @@ import { Botao, BotaoOuvir, Fundo } from "./ui";
 
 // Abertura da história: a coordenadora da agência de checagem contrata o jogador.
 const PARAGRAFOS = [
-  "Bem-vindo(a) ao Vale Verde Checa!",
+  "Bem-vindo(a) ao Paulo Afonso Checa!",
   "Nas últimas semanas, boatos tomaram conta da cidade. Gente faltou ao trabalho por causa de um feriado que não existia, e teve quem perdesse dinheiro clicando em link falso de banco.",
   "A comunidade precisa de alguém que separe fato de boato. A partir de hoje, esse alguém é você.",
   "Todos os dias chegam notícias pelo WhatsApp, redes sociais, blogs e sites. Investigue antes de decidir: compartilhe só o que for totalmente verdadeiro e segure o que for falso ou distorcido.",
@@ -32,7 +32,7 @@ export default function Intro({ onComecar }: { onComecar: () => void }) {
             <h1 id="intro-titulo" className="font-titulo text-2xl leading-tight sm:text-3xl">
               Marta Ribeiro
             </h1>
-            <p className="text-sm">Coordenadora do Vale Verde Checa</p>
+            <p className="text-sm">Coordenadora do Paulo Afonso Checa</p>
           </div>
           <BotaoOuvir id="intro" texto={PARAGRAFOS.join(" ")} />
         </header>

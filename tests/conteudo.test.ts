@@ -18,9 +18,9 @@ function contar<T>(itens: T[]) {
 }
 
 describe("conteúdo migrado do Unity", () => {
-  it("tem 24 notícias, 15 fontes e 4 fases", () => {
+  it("tem 24 notícias, 20 fontes e 4 fases", () => {
     expect(noticiasJson).toHaveLength(24);
-    expect(fontesJson).toHaveLength(15);
+    expect(fontesJson).toHaveLength(20);
     expect(fasesJson).toHaveLength(4);
   });
 
@@ -102,18 +102,30 @@ describe("Fase 4 – Olho clínico", () => {
 
   it("esconde o status das fontes e tem dica; as outras fases não", () => {
     expect(fase4.ocultarStatusDaFonte).toBe(true);
-    expect(fase4.dica).toContain("erros de português");
+    expect(fase4.dica).toContain("revisa o que publica");
     for (const id of ["Fase1", "Fase2", "Fase3"]) {
       expect(obterFase(id).ocultarStatusDaFonte).toBe(false);
       expect(obterFase(id).dica).toBe("");
     }
   });
 
-  it("mantém os erros de português propositais das fontes falsas", () => {
-    const nomes = fase4.noticias.map((n) => n.autor?.nomeExibido);
-    expect(nomes).toContain("Defeza Civil de Vale Verde");
-    expect(nomes).toContain("Ministerio da Previdência Sosial");
-    expect(nomes).toContain("Prefeitura de Vale Verde – Portal Ofissial");
-    expect(nomes).toContain("Portal Ciênsia Hoje");
+  it("fontes falsas copiam nomes reais e só erram, de leve, no que escrevem", () => {
+    const falsas = fase4.noticias.filter((n) => n.veredito !== "Verdadeira");
+    const nomes = falsas.map((n) => n.autor?.nomeExibido);
+    expect(nomes).toContain("Defesa Civil de Paulo Afonso");
+    expect(nomes).toContain("Ministério da Previdência Social");
+    // erros propositais nos históricos das fontes (não podem ser "corrigidos" por engano)
+    const historicos = falsas.map((n) => n.autor?.historico).join(" ");
+    for (const erro of ["atravéz", "Nossa missão e levar", "beneficios", "atento as"]) {
+      expect(historicos).toContain(erro);
+    }
+  });
+
+  it("notícias verdadeiras da Fase 4 não têm erros de português nas investigações", () => {
+    for (const n of fase4.noticias.filter((x) => x.veredito === "Verdadeira")) {
+      expect(`${n.textoVerificarFonte} ${n.textoPesquisar}`).not.toMatch(
+        /atravéz|Seje|afim de|excessão/,
+      );
+    }
   });
 });

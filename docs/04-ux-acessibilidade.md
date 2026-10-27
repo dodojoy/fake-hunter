@@ -39,7 +39,11 @@ que atingem contraste AA.
 - **Botões nunca dependem só da cor**: decisão tem ícone e texto; o status da fonte tem
   símbolo (✔ ✖ ?) e texto.
 
+- **Como jogar em duas páginas:** regras e selos. A página de selos mostra os quatro selos com uma
+  descrição curta, sem revelar os números, para o jogador não jogar "contando" acertos.
+
 ![Tutorial](img/tutorial.jpg)
+![Página de selos do Como jogar](img/como-jogar-selos.jpg)
 ![Explicação com sinais](img/explicacao.jpg)
 
 ## Recursos de acessibilidade

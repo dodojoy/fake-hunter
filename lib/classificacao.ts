@@ -25,12 +25,14 @@ export function calcularSelo(acertos: number, erros: number): Selo {
 // As cores do protótipo foram escurecidas para o texto atingir contraste AA sobre o papel.
 export const SELOS: Record<
   Selo,
-  { titulo: string; descricao: string; imagem: string; cor: string }
+  { titulo: string; descricao: string; descricaoCurta: string; imagem: string; cor: string }
 > = {
   Especialista: {
     titulo: "Especialista",
     descricao:
       "Nenhuma fake news escapou! Com 100% de acerto, a comunidade confia de olhos fechados no seu trabalho.",
+    // Texto curto, sem números, para a página "Selos" do Como jogar.
+    descricaoCurta: "Não deixou nenhuma fake news escapar.",
     imagem: "/img/ui/selos/selo_especialista.png",
     cor: "#8a5a00",
   },
@@ -38,6 +40,7 @@ export const SELOS: Record<
     titulo: "Caçador voraz",
     descricao:
       "Poucas fake news escapam de você. Mais um pouco de atenção aos detalhes e você vira especialista.",
+    descricaoCurta: "Pegou quase todas as fake news.",
     imagem: "/img/ui/selos/selo_voraz.png",
     cor: "#a8460f",
   },
@@ -45,6 +48,7 @@ export const SELOS: Record<
     titulo: "Caçador vegetariano",
     descricao:
       "Você sai para caçar, mas deixa muita fake news escapar. Investigue com mais calma antes de decidir.",
+    descricaoCurta: "Caçou algumas, mas deixou muitas escaparem.",
     imagem: "/img/ui/selos/selo_vegetariano.png",
     cor: "#1f7a40",
   },
@@ -52,6 +56,7 @@ export const SELOS: Record<
     titulo: "Caçado pelas fake news",
     descricao:
       "Você chegou ao fim, mas as fake news levaram a melhor: muita desinformação passou por você. Revise as explicações e tente de novo!",
+    descricaoCurta: "As fake news levaram a melhor.",
     imagem: "/img/ui/selos/selo_cacado.png",
     cor: "#a92e2e",
   },

@@ -1,6 +1,6 @@
 # Fake Hunter
 
-Jogo educativo web sobre desinformação. Você é o checador de fatos de Vale Verde: lê as
+Jogo educativo web sobre desinformação. Você é o checador de fatos de Paulo Afonso (BA): lê as
 notícias que chegam pelo WhatsApp, redes sociais e sites, investiga com ferramentas limitadas e
 decide se compartilha ou bloqueia. Depois de cada decisão, o jogo explica por que a notícia era
 verdadeira, falsa ou meia verdade, e guarda os sinais aprendidos no **Caderno do Checador**.
@@ -21,15 +21,17 @@ Verificações (rode antes de entregar):
 ```bash
 npm run lint
 npm run typecheck
-npm test           # 56 testes: regras, conteúdo, classificação e pacotes do modo professor
+npm test           # 58 testes: regras, conteúdo, classificação e pacotes do modo professor
 ```
 
 ## O que tem no jogo
 
-- 4 fases, 24 notícias, 15 fontes; narrativa com introdução, abertura de fase e tela de conclusão
+- 4 fases, 24 notícias, 20 fontes; narrativa com introdução, abertura de fase e tela de conclusão
   com selo de desempenho e certificado.
-- Fase 4 "Olho clínico": a ficha das fontes não mostra se são confiáveis, e as falsas se
-  entregam por erros de português; botão de dica (lâmpada).
+- Fases 2 e 3 com muitas fontes de status "desconhecido", para depender da investigação.
+- Fase 4 "Olho clínico": a ficha das fontes não mostra se são confiáveis; as falsas copiam nomes
+  de órgãos reais e só se entregam por erros sutis de português; botão de dica (lâmpada).
+- Como jogar com duas páginas: regras e selos.
 - Tutorial guiado, carimbo de veredito, explicação com os sinais de cada notícia.
 - Interface responsiva (computador e celular) e PWA instalável que funciona offline.
 - Acessibilidade: texto ampliável, alto contraste, reduzir animações, leitura em voz alta,

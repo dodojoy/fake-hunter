@@ -1,7 +1,7 @@
 # Documentação do Fake Hunter
 
-Jogo educativo web sobre desinformação: o jogador é o checador de fatos da cidade fictícia de
-Vale Verde, investiga notícias e decide se elas merecem ser compartilhadas.
+Jogo educativo web sobre desinformação: o jogador é o checador de fatos de Paulo Afonso
+(BA), investiga notícias e decide se elas merecem ser compartilhadas.
 
 | Documento | Conteúdo |
 | --- | --- |

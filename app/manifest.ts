@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Fake Hunter",
     short_name: "Fake Hunter",
     description:
-      "Jogo educativo: seja o checador de fatos de Vale Verde e aprenda a identificar desinformação.",
+      "Jogo educativo: seja o checador de fatos de Paulo Afonso (BA) e aprenda a identificar desinformação.",
     lang: "pt-BR",
     start_url: "/",
     display: "standalone",

@@ -17,7 +17,7 @@ const titulo = Bebas_Neue({
 export const metadata: Metadata = {
   title: "Fake Hunter",
   description:
-    "Jogo educativo: seja o checador de fatos de Vale Verde e aprenda a identificar desinformação.",
+    "Jogo educativo: seja o checador de fatos de Paulo Afonso (BA) e aprenda a identificar desinformação.",
   icons: { icon: "/img/ui/icone_app.png", apple: "/icons/icon-192.png" },
   appleWebApp: { capable: true, title: "Fake Hunter", statusBarStyle: "black-translucent" },
 };

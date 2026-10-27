@@ -55,7 +55,8 @@ material de revisão.
 
 - **Educacional:** sessões curtas, cabem numa aula; feedback imediato e explicativo; certificado
   imprimível ao final; relatório de desempenho para o professor discutir com a turma.
-- **Social:** conteúdo ambientado numa cidade fictícia, sem partidos ou pessoas reais, para
-  tratar o tema sem polarização.
+- **Social:** conteúdo ambientado em Paulo Afonso (BA), para aproximar os casos do dia a dia
+  do público, mas sem partidos ou pessoas reais identificadas, para tratar o tema sem
+  polarização. Os casos são inventados para fins educativos.
 - **Técnico:** roda no navegador de qualquer celular ou computador, sem instalação nem login;
   pode ser instalado como app e funciona offline (útil em escolas com internet instável).

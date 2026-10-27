@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { aproveitamento, calcularSelo } from "@/lib/classificacao";
+import { aproveitamento, calcularSelo, SELOS } from "@/lib/classificacao";
 
 describe("selo da tela de conclusão", () => {
   it("Especialista só com 100% de acerto", () => {
@@ -17,5 +17,11 @@ describe("selo da tela de conclusão", () => {
   it("sem nenhuma notícia decidida não é Especialista", () => {
     expect(aproveitamento(0, 0)).toBe(0);
     expect(calcularSelo(0, 0)).toBe("CacadoPelasFakeNews");
+  });
+});
+
+describe("página de selos do Como jogar", () => {
+  it("as descrições curtas não revelam os limites de acerto", () => {
+    for (const selo of Object.values(SELOS)) expect(selo.descricaoCurta).not.toMatch(/\d|%/);
   });
 });

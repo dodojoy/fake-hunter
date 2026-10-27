@@ -51,7 +51,8 @@ type IconeBotao =
   | "proxima"
   | "repetir"
   | "sair"
-  | "verificar_fonte";
+  | "verificar_fonte"
+  | "voltar";
 
 interface BotaoProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   cor: Cor;

@@ -1,5 +1,12 @@
 [
   {
+    "id": "AchadinhosDoDia",
+    "nomeExibido": "@achadinhosdodia",
+    "avatar": null,
+    "status": "Desconhecida",
+    "historico": "Perfil de promoções e cupons. Divulga ofertas de várias lojas, mas não diz se confere os anúncios antes de publicar."
+  },
+  {
     "id": "CarlosNoticias",
     "nomeExibido": "Carlos Notícias",
     "avatar": null,
@@ -8,17 +15,24 @@
   },
   {
     "id": "CiensiaHoje",
-    "nomeExibido": "Portal Ciênsia Hoje",
+    "nomeExibido": "Portal Ciência Hoje",
     "avatar": null,
     "status": "NaoConfiavel",
-    "historico": "Site de divulgação científica com resumos de estudos do mundo inteiro, traduzido pela nossa equipe."
+    "historico": "Portal de divulgação científica que traz, todos os dias, as pesquisas mais recentes do mundo inteiro explicadas de um jeito simples. Nossa missão e levar ciência de qualidade para todos, sem complicação."
   },
   {
     "id": "DefezaCivil",
-    "nomeExibido": "Defeza Civil de Vale Verde",
+    "nomeExibido": "Defesa Civil de Paulo Afonso",
     "avatar": null,
     "status": "NaoConfiavel",
-    "historico": "Perfil de alerta á população. Avisamos primeiro que todo mundo, siga a página e ative as notificação."
+    "historico": "Perfil criado para avisar a população sobre enchentes, deslizamentos e outras emergências. Ative as notificações para receber os alertas assim que forem emitidos e fique sempre atento as nossas publicações."
+  },
+  {
+    "id": "DicasDeTecnologia",
+    "nomeExibido": "Canal Dicas de Tecnologia",
+    "avatar": null,
+    "status": "Desconhecida",
+    "historico": "Canal de vídeos curtos sobre celulares e aplicativos. Foi criado este ano e ainda não tem histórico de checagens."
   },
   {
     "id": "DrSaudeNatural",
@@ -26,6 +40,13 @@
     "avatar": null,
     "status": "NaoConfiavel",
     "historico": "Perfil que vende chás e suplementos. Não tem registro em nenhum conselho de medicina e já teve posts removidos por informação falsa."
+  },
+  {
+    "id": "EconomiaSemFiltro",
+    "nomeExibido": "@economiasemfiltro",
+    "avatar": null,
+    "status": "Desconhecida",
+    "historico": "Perfil sobre economia e política criado há cerca de um ano. Não informa quem administra a página."
   },
   {
     "id": "FofocasDaCidade",
@@ -57,24 +78,38 @@
   },
   {
     "id": "PortalOfissial",
-    "nomeExibido": "Prefeitura de Vale Verde – Portal Ofissial",
+    "nomeExibido": "Prefeitura de Paulo Afonso – Portal do Cidadão",
     "avatar": null,
     "status": "NaoConfiavel",
-    "historico": "Canal de atendimento da prefeitura. Mantenha seus dados atualisados para não perder seus benefício."
+    "historico": "Canal de atendimento ao cidadão. Mantenha seu cadastro atualizado para continuar recebendo os serviços e beneficios da prefeitura sem nenhuma interrupção."
   },
   {
     "id": "PrefeituraValeVerde",
-    "nomeExibido": "Prefeitura de Vale Verde – Portal Oficial",
+    "nomeExibido": "Prefeitura de Paulo Afonso – Portal Oficial",
     "avatar": null,
     "status": "Confiavel",
     "historico": "Canal oficial da prefeitura, com endereço .gov.br. Publica decretos, avisos e campanhas públicas."
   },
   {
     "id": "PrevidenciaSosial",
-    "nomeExibido": "Ministerio da Previdência Sosial",
+    "nomeExibido": "Ministério da Previdência Social",
     "avatar": null,
     "status": "NaoConfiavel",
-    "historico": "Pagina oficial do governo federal com as notícias mais importante para os aposentado. Compartilhe com todos os seus contato!"
+    "historico": "Canal oficial de informações sobre benefícios do INSS. Aqui você fica sabendo primeiro dos pagamentos e das novidades para aposentados e pensionistas, e pode tirar suas dúvidas atravéz do nosso atendimento."
+  },
+  {
+    "id": "SaudeSemSegredos",
+    "nomeExibido": "Saúde Sem Segredos",
+    "avatar": null,
+    "status": "Desconhecida",
+    "historico": "Página de dicas de saúde com muitos seguidores. Não informa quem são os autores dos textos."
+  },
+  {
+    "id": "SertaoAgora",
+    "nomeExibido": "Portal Sertão Agora",
+    "avatar": null,
+    "status": "Desconhecida",
+    "historico": "Portal de notícias regional no ar há poucos meses. Mistura reportagens próprias com textos reaproveitados de outros sites."
   },
   {
     "id": "TiaMarcia",
@@ -85,7 +120,7 @@
   },
   {
     "id": "UniversidadeFederal",
-    "nomeExibido": "Universidade Federal de Vale Verde (UFVV)",
+    "nomeExibido": "Universidade Federal de Paulo Afonso (UFPAF)",
     "avatar": null,
     "status": "Confiavel",
     "historico": "Instituição pública de ensino e pesquisa. Publica editais e resultados de estudos em canais oficiais."
